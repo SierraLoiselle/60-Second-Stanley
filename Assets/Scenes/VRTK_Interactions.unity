@@ -327,9 +327,9 @@ GameObject:
   - component: {fileID: 83872374}
   - component: {fileID: 83872373}
   - component: {fileID: 83872379}
-  - component: {fileID: 83872378}
   - component: {fileID: 83872377}
   - component: {fileID: 83872380}
+  - component: {fileID: 83872378}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -398,7 +398,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 83872372}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.301, y: 0.56, z: 0}
+  m_LocalPosition: {x: 0.458, y: 0.56, z: 0}
   m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -447,12 +447,12 @@ MonoBehaviour:
   ignoredColliders: []
   isGrabbable: 1
   holdButtonToGrab: 1
-  stayGrabbedOnTeleport: 1
+  stayGrabbedOnTeleport: 0
   validDrop: 1
   grabOverrideButton: 0
   allowedGrabControllers: 0
-  grabAttachMechanicScript: {fileID: 0}
-  secondaryGrabActionScript: {fileID: 0}
+  grabAttachMechanicScript: {fileID: 83872380}
+  secondaryGrabActionScript: {fileID: 83872378}
   isUsable: 0
   holdButtonToUse: 0
   useOnlyIfGrabbed: 0
@@ -470,17 +470,32 @@ MonoBehaviour:
   m_GameObject: {fileID: 83872372}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8afa0b205791c9f4496bf2814aeac078, type: 3}
+  m_Script: {fileID: 11500000, guid: 73caffd546f90194babc0be53abf0893, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  precisionGrab: 0
+  precisionGrab: 1
   rightSnapHandle: {fileID: 0}
   leftSnapHandle: {fileID: 0}
   throwVelocityWithAttachDistance: 0
   throwMultiplier: 1
   onGrabCollisionDelay: 0
-  destroyImmediatelyOnThrow: 1
-  breakForce: 1500
+  detachDistance: 1
+  trackingSpeed: 25
+  forceKinematicOnGrab: 1
+  releaseDecelerationDamper: 5
+  resetToOrignOnReleaseSpeed: 0
+  xAxisLimits:
+    minimum: 0
+    maximum: 0
+  yAxisLimits:
+    minimum: 0
+    maximum: 0
+  zAxisLimits:
+    minimum: 0
+    maximum: 0
+  minMaxThreshold: 0.01
+  minMaxNormalizedThreshold: 0.01
+  localOrigin: {x: 0, y: 0, z: 0}
 --- !u!1 &93277262
 GameObject:
   m_ObjectHideFlags: 0
@@ -1278,8 +1293,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   autoManageScriptDefines: 1
   activeScriptingDefineSymbolsWithoutSDKClasses: []
-  scriptAliasLeftController: {fileID: 0}
-  scriptAliasRightController: {fileID: 0}
+  scriptAliasLeftController: {fileID: 1477226114}
+  scriptAliasRightController: {fileID: 770656891}
   autoManageVRSettings: 1
   autoLoadSetup: 1
   setups:
@@ -1541,7 +1556,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 605908722}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 1.118, y: -0.638, z: -0.467}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1185437690}
@@ -2679,7 +2694,7 @@ MonoBehaviour:
   moveBackward: 115
   moveRight: 100
   sprint: 304
-  triggerAlias: 324
+  triggerAlias: 111
   gripAlias: 323
   touchpadAlias: 113
   buttonOneAlias: 101
