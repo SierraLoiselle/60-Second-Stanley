@@ -7,6 +7,6 @@ public class Buttons : MonoBehaviour {
 
     public void GameButton ()
     {
-        SceneManager.LoadScene("DemoScene");
+        SceneManager.LoadScene("Locked Room");
     }
 }
