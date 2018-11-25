@@ -10,6 +10,7 @@ namespace VRTK.Examples
     {
         public VRTK_InteractableObject linkedObject;
         public bool Eat = false;
+        public bool Destroy = false;
         public float EatTime = 2f;
 
         GameObject[] portions;
@@ -33,8 +34,16 @@ namespace VRTK.Examples
         {
             if (Time.time - lastChange > interval && Eat == true)
             {
+                if (Time.time - lastChange >= EatTime)
+                {
+                    Destroy = true;
+                }
                 Consume();
                 lastChange = Time.time;
+            }
+            if (Destroy == true)
+            {
+                DestroyObject(this);
             }
         }
 
