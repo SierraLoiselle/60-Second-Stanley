@@ -57,8 +57,9 @@ GameObject:
   - component: {fileID: 33525187139317576}
   - component: {fileID: 23747721262840088}
   - component: {fileID: 65160653499756870}
-  - component: {fileID: 114478388087744286}
   - component: {fileID: 54595141405484978}
+  - component: {fileID: 114452172077499900}
+  - component: {fileID: 114189024181584674}
   m_Layer: 0
   m_Name: foodBread
   m_TagString: Untagged
@@ -289,7 +290,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 2100000, guid: 1276d070c61c96e41ade468cf4441531, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -406,7 +407,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.08873456, y: 0.07396245, z: 0.14024173}
   m_Center: {x: 0, y: 0.0026486032, z: -0.00014171004}
---- !u!114 &114478388087744286
+--- !u!114 &114189024181584674
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -414,12 +415,47 @@ MonoBehaviour:
   m_GameObject: {fileID: 1203123983466678}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 75cf208ad4ef14a42a3e801c83532232, type: 3}
+  m_Script: {fileID: 11500000, guid: 5ec2ac476f2fc9a45a4e69712580a603, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  linkedObject: {fileID: 0}
-  Eat: 0
-  EatTime: 2
+  precisionGrab: 0
+  rightSnapHandle: {fileID: 0}
+  leftSnapHandle: {fileID: 0}
+  throwVelocityWithAttachDistance: 0
+  throwMultiplier: 1
+  onGrabCollisionDelay: 0
+--- !u!114 &114452172077499900
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1203123983466678}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3abaf4521bf2344ea21ed3020b98eb2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  disableWhenIdle: 1
+  allowedNearTouchControllers: 0
+  allowedTouchControllers: 0
+  ignoredColliders: []
+  isGrabbable: 1
+  holdButtonToGrab: 1
+  stayGrabbedOnTeleport: 1
+  validDrop: 1
+  grabOverrideButton: 0
+  allowedGrabControllers: 0
+  grabAttachMechanicScript: {fileID: 0}
+  secondaryGrabActionScript: {fileID: 0}
+  isUsable: 1
+  holdButtonToUse: 1
+  useOnlyIfGrabbed: 1
+  pointerActivatesUseAction: 0
+  useOverrideButton: 0
+  allowedUseControllers: 0
+  objectHighlighter: {fileID: 0}
+  touchHighlightColor: {r: 0, g: 0, b: 0, a: 0}
+  usingState: 0
 --- !u!114 &114542058955035644
 MonoBehaviour:
   m_ObjectHideFlags: 1

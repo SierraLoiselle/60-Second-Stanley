@@ -140,7 +140,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6cb8bbee357b65240ab4833975c34bee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HamPrefab: {fileID: 54379469206050344, guid: c60e76bc1da88184d900633311b92401, type: 2}
+  HamPrefab: {fileID: 54165317994466988, guid: 40133dc913fe6364ea1a548c64098bb5, type: 2}
 --- !u!4 &386551485
 Transform:
   m_ObjectHideFlags: 0
