@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.30692244, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -150,7 +150,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 805, y: -70}
+  m_AnchoredPosition: {x: 861, y: -70}
   m_SizeDelta: {x: 142, y: 120}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &159875049
@@ -1849,7 +1849,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &870452769
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3593,6 +3593,83 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1835785053
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1835785056}
+  - component: {fileID: 1835785055}
+  - component: {fileID: 1835785054}
+  m_Layer: 0
+  m_Name: Camera
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!81 &1835785054
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1835785053}
+  m_Enabled: 1
+--- !u!20 &1835785055
+Camera:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1835785053}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_ClearFlags: 1
+  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_projectionMatrixMode: 1
+  m_SensorSize: {x: 36, y: 24}
+  m_LensShift: {x: 0, y: 0}
+  m_FocalLength: 50
+  m_NormalizedViewPortRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+  near clip plane: 0.3
+  far clip plane: 1000
+  field of view: 60
+  orthographic: 0
+  orthographic size: 5
+  m_Depth: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingPath: -1
+  m_TargetTexture: {fileID: 0}
+  m_TargetDisplay: 0
+  m_TargetEye: 3
+  m_HDR: 1
+  m_AllowMSAA: 1
+  m_AllowDynamicResolution: 0
+  m_ForceIntoRT: 0
+  m_OcclusionCulling: 1
+  m_StereoConvergence: 10
+  m_StereoSeparation: 0.022
+--- !u!4 &1835785056
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1835785053}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 2.5, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!1 &1884023451
 GameObject:
   m_ObjectHideFlags: 0
@@ -4026,7 +4103,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6cb8bbee357b65240ab4833975c34bee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HamPrefab: {fileID: 54247494613431516, guid: 8ac724ccd0e568a4bb70e98c937a1db8, type: 2}
+  BreadPrefab: {fileID: 54595141405484978, guid: b8a7f8984a590284db7a6448cfba19ae,
+    type: 2}
+  CakePrefab: {fileID: 54165317994466988, guid: 40133dc913fe6364ea1a548c64098bb5,
+    type: 2}
+  CheesePrefab: {fileID: 54775781701878432, guid: 289cb9c1145182e45ab8ee536a91ccb2,
+    type: 2}
+  FishPrefab: {fileID: 54590092667700610, guid: 0caec97999ee79c47a21c8ab932f8a18,
+    type: 2}
+  HamPrefab: {fileID: 54892001420386366, guid: c60e76bc1da88184d900633311b92401, type: 2}
+  PiePrefab: {fileID: 54247494613431516, guid: 8ac724ccd0e568a4bb70e98c937a1db8, type: 2}
+  RibsPrefab: {fileID: 54044245603670550, guid: 5f2a5e6bb9195bf49ae1fb65b22f68a7,
+    type: 2}
+  SteakPrefab: {fileID: 54641648804816328, guid: 288b391a8c0212046b7a0eb0d638af62,
+    type: 2}
+  StewPrefab: {fileID: 54978586246723294, guid: a6fff4632989dc847bd1130d8c52a14f,
+    type: 2}
+  WMelonPrefab: {fileID: 54741607215054850, guid: e21d6d1b100f3f3469de527f665169e8,
+    type: 2}
 --- !u!4 &2088407253
 Transform:
   m_ObjectHideFlags: 0
