@@ -25,7 +25,7 @@ GameObject:
   - component: {fileID: 114638640639120542}
   - component: {fileID: 114883522214228500}
   m_Layer: 0
-  m_Name: Fluid Particle System
+  m_Name: FlowingWater
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -82,7 +82,7 @@ MonoBehaviour:
   m_Prewarm: 0
 --- !u!114 &114638640639120542
 MonoBehaviour:
-  m_ObjectHideFlags: 1
+  m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1266607629007412}
@@ -111,7 +111,7 @@ MonoBehaviour:
   _compositeShader: {fileID: 4800000, guid: 2838a75643581b446ad8e2e88931ecf7, type: 3}
 --- !u!114 &114883522214228500
 MonoBehaviour:
-  m_ObjectHideFlags: 1
+  m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1266607629007412}
@@ -188,7 +188,7 @@ MonoBehaviour:
   m_Smoothing: 0.25
 --- !u!198 &198339314163846836
 ParticleSystem:
-  m_ObjectHideFlags: 1
+  m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1266607629007412}
