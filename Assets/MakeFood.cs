@@ -27,10 +27,50 @@ public class MakeFood : MonoBehaviour {
 	void Start () {
 
 
-        FoodInstance = HamPrefab;
 
-        for (int i = 0; i < 10; i++)
+        for (int i = 0; i < 100; i++)
         {
+            if (i<10)
+            {
+                FoodInstance = BreadPrefab;
+            }
+            else if (i < 20)
+            {
+                FoodInstance = CakePrefab;
+            }
+            else if (i < 30)
+            {
+                FoodInstance = CheesePrefab;
+            }
+            else if (i < 40)
+            {
+                FoodInstance = FishPrefab;
+            }
+            else if (i < 50)
+            {
+                FoodInstance = HamPrefab;
+            }
+            else if (i < 60)
+            {
+                FoodInstance = PiePrefab;
+            }
+            else if (i < 70)
+            {
+                FoodInstance = RibsPrefab;
+            }
+            else if (i < 80)
+            {
+                FoodInstance = SteakPrefab;
+            }
+            else if (i < 90)
+            {
+                FoodInstance = StewPrefab;
+            }
+            else if (i < 100)
+            {
+                FoodInstance = WMelonPrefab;
+            }
+
             FoodInstance.transform.position = new Vector3(Random.Range(minxpos, maxxpos), 0, Random.Range(minzpos, maxzpos));
             foodStuff.Add(FoodInstance);
             Instantiate(foodStuff[i]);
