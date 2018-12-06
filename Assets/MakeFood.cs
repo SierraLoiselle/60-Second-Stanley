@@ -14,6 +14,10 @@ public class MakeFood : MonoBehaviour {
     public Rigidbody SteakPrefab;
     public Rigidbody StewPrefab;
     public Rigidbody WMelonPrefab;
+    public float minxpos;
+    public float maxxpos;
+    public float minzpos;
+    public float maxzpos;
 
 
     private Rigidbody FoodInstance;
@@ -23,12 +27,16 @@ public class MakeFood : MonoBehaviour {
 	void Start () {
 
 
+        FoodInstance = HamPrefab;
+
         for (int i = 0; i < 10; i++)
         {
-            FoodInstance = Instantiate(HamPrefab);
-            FoodInstance.position = new Vector3(Random.Range(-3f, 3f), 0, Random.Range(-23f, 23f));
+            FoodInstance.transform.position = new Vector3(Random.Range(minxpos, maxxpos), 0, Random.Range(minzpos, maxzpos));
+            foodStuff.Add(FoodInstance);
+            Instantiate(foodStuff[i]);
+            Debug.Log("i = " + i + " : " + foodStuff[i].transform.position);
         }
-	}
+    }
 	
 	// Update is called once per frame
 	void Update () {
