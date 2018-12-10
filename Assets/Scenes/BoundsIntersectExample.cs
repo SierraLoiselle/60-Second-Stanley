@@ -7,29 +7,62 @@ using UnityEngine;
 
 public class BoundsIntersectExample : MonoBehaviour
 {
-    public GameObject m_MyObject, m_NewObject;
-    Collider m_Collider, m_Collider2;
-    public AudioClip music;
-    AudioSource audioSource;
+    public GameObject PersonObject, WaterObject, WaterfallObject;
+    Collider PersonCollider, WaterCollider;
+    public AudioClip WaterfallSound, WaterSound;
+    AudioSource WaterFallSource, WaterSource;
+    bool PlayerInWater;
 
     void Start()
     {
-        //Check that the first GameObject exists in the Inspector and fetch the Collider
-        if (m_MyObject != null)
-            m_Collider = m_MyObject.GetComponent<Collider>();
+        //check if person object exists and fetch collider
+        if (PersonObject != null)
+        {
+         PersonCollider = PersonObject.GetComponent<Collider>();
+        }
+            
 
-        //Check that the second GameObject exists in the Inspector and fetch the Collider
-        if (m_NewObject != null)
-            m_Collider2 = m_NewObject.GetComponent<Collider>();
-        audioSource = m_NewObject.GetComponent<AudioSource>();
+        //check if water object exists and fetch collider and audio source
+        if (WaterObject != null)
+        {
+            WaterCollider = WaterObject.GetComponent<Collider>();
+            WaterSource = WaterObject.GetComponent<AudioSource>();
+        }
+        //check for the existance of a water particle emitter and fetch audio source
+        if (WaterfallObject != null)
+        {
+            WaterFallSource = WaterfallObject.GetComponent<AudioSource>();
+        }
+
     }
 
     void Update()
     {
-        //If the first GameObject's Bounds enters the second GameObject's Bounds, output the message
-        if (m_Collider.bounds.Intersects(m_Collider2.bounds))
+        //if person collider enters water collider play sound from both emitters
+        if (PersonCollider.bounds.Intersects(WaterCollider.bounds) && PlayerInWater != true)
         {
-            audioSource.PlayOneShot(music, 0.7F);
+            PlayerInWater = true;
+            WaterFallSource.PlayOneShot(WaterfallSound, 0.7F);
+            WaterSource.PlayOneShot(WaterSound, 0.5F);
+        }
+        if(PersonCollider.bounds.Intersects(WaterCollider.bounds) && (!WaterFallSource.isPlaying || !WaterSource.isPlaying))
+        {
+            if(!WaterFallSource.isPlaying)
+            {
+                WaterFallSource.PlayOneShot(WaterfallSound, 0.7F);
+            }
+            if (!WaterSource.isPlaying)
+            {
+                WaterSource.PlayOneShot(WaterSound, 0.5F);
+            }
+        }
+        else if(!PersonCollider.bounds.Intersects(WaterCollider.bounds))
+        {
+            PlayerInWater = false;
+            WaterFallSource.Stop();
+            WaterSource.Stop();
+
+
         }
     }
 }
