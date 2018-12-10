@@ -26,4 +26,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/VRTK_Interactions.unity
     guid: aa9f381c2256dbc498f699c94126be6c
+  - enabled: 1
+    path: Assets/Scenes/Locked Room with Water.unity
+    guid: 3fb4b01a540154c4db972c2f55766a8d
   m_configObjects: {}

@@ -150,7 +150,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 861, y: -70}
+  m_AnchoredPosition: {x: 1026, y: -70}
   m_SizeDelta: {x: 142, y: 120}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &159875049
@@ -1849,7 +1849,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &870452769
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4121,6 +4121,10 @@ MonoBehaviour:
     type: 2}
   WMelonPrefab: {fileID: 54741607215054850, guid: e21d6d1b100f3f3469de527f665169e8,
     type: 2}
+  minxpos: 0
+  maxxpos: 0
+  minzpos: 0
+  maxzpos: 0
 --- !u!4 &2088407253
 Transform:
   m_ObjectHideFlags: 0

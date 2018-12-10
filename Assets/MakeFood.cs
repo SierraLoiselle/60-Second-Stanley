@@ -28,45 +28,45 @@ public class MakeFood : MonoBehaviour {
 
 
 
-        for (int i = 0; i < 100; i++)
+        for (int i = 0; i < 10; i++)
         {
-            if (i<10)
+            if (i<1)
             {
                 FoodInstance = BreadPrefab;
             }
-            else if (i < 20)
+            else if (i < 2)
             {
                 FoodInstance = CakePrefab;
             }
-            else if (i < 30)
+            else if (i < 3)
             {
                 FoodInstance = CheesePrefab;
             }
-            else if (i < 40)
+            else if (i < 4)
             {
                 FoodInstance = FishPrefab;
             }
-            else if (i < 50)
+            else if (i < 5)
             {
                 FoodInstance = HamPrefab;
             }
-            else if (i < 60)
+            else if (i < 6)
             {
                 FoodInstance = PiePrefab;
             }
-            else if (i < 70)
+            else if (i < 7)
             {
                 FoodInstance = RibsPrefab;
             }
-            else if (i < 80)
+            else if (i < 8)
             {
                 FoodInstance = SteakPrefab;
             }
-            else if (i < 90)
+            else if (i < 9)
             {
                 FoodInstance = StewPrefab;
             }
-            else if (i < 100)
+            else if (i < 10)
             {
                 FoodInstance = WMelonPrefab;
             }
