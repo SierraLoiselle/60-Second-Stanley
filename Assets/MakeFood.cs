@@ -71,7 +71,7 @@ public class MakeFood : MonoBehaviour {
                 FoodInstance = WMelonPrefab;
             }
 
-            FoodInstance.transform.position = new Vector3(Random.Range(minxpos, maxxpos), 0, Random.Range(minzpos, maxzpos));
+            FoodInstance.transform.position = new Vector3(Random.Range(minxpos, maxxpos), .5f, Random.Range(minzpos, maxzpos));
             foodStuff.Add(FoodInstance);
             Instantiate(foodStuff[i]);
             Debug.Log("i = " + i + " : " + foodStuff[i].transform.position);
