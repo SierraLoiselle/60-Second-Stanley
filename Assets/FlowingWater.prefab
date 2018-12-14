@@ -24,6 +24,8 @@ GameObject:
   - component: {fileID: 199704911777333630}
   - component: {fileID: 114638640639120542}
   - component: {fileID: 114883522214228500}
+  - component: {fileID: 64922026005959330}
+  - component: {fileID: 114779872859199624}
   m_Layer: 0
   m_Name: FlowingWater
   m_TagString: Untagged
@@ -44,6 +46,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!64 &64922026005959330
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1266607629007412}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_SkinWidth: 0.01
+  m_Mesh: {fileID: 0}
 --- !u!114 &114624091815916406
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -109,6 +125,48 @@ MonoBehaviour:
     type: 3}
   _blurShader: {fileID: 4800000, guid: 45c21a9660dfc664c916e011b814db0e, type: 3}
   _compositeShader: {fileID: 4800000, guid: 2838a75643581b446ad8e2e88931ecf7, type: 3}
+--- !u!114 &114779872859199624
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1266607629007412}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 9900371, guid: b435991485f6c8a4f9af5ca764dd7f07, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_CreatedObj: 0
+  m_DestroyedObj: 0
+  m_EditorFoldout: 1
+  m_SolverEnabled: 1
+  m_EnableHardwareAcceleration: 1
+  m_FluidType: 1
+  m_Dimensions: 0
+  m_CullingType: 0
+  m_SmoothingDistance: 0.38125
+  m_ParticleMass: 100
+  m_Density: 10
+  m_MinimumDensity: 499.145
+  m_Viscosity: 2
+  m_Turbulence: 0.2
+  m_SurfaceTension: 0.728
+  m_GasConstant: 0.01
+  m_BuoyancyCoefficient: 0
+  m_SimulationScale: 1
+  m_FluidSettingsFoldoutEditor: 0
+  m_PhysicalPropertiesFoldoutEditor: 0
+  m_PluginsFoldoutEditor: 0
+  m_ColliderResolution: 4
+  m_BoundsType: 0
+  m_ColliderBounds:
+  - m_Center: {x: 0, y: 0, z: 0}
+    m_Extent: {x: 0.5, y: 0.5, z: 0.5}
+  m_FillCollider: 0
+  m_VisualizeCollider: 0
+  m_AutoGenerateInPlayMode: 0
+  m_AttachedCollider: {fileID: 0}
+  m_WheelColliderThickness: 0.214884
 --- !u!114 &114883522214228500
 MonoBehaviour:
   m_ObjectHideFlags: 3
