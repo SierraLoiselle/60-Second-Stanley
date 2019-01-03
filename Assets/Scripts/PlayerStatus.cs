@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NewBehaviourScript : MonoBehaviour {
+public class PlayerStatus : MonoBehaviour {
 
 
     public float eatTimeGap;
@@ -23,6 +23,7 @@ public class NewBehaviourScript : MonoBehaviour {
         if (Input.GetKeyDown("space"))
         {
             lastEatTime = Time.time;
+            
             if (hunger < 20)
             {
                 hunger++;
@@ -33,6 +34,7 @@ public class NewBehaviourScript : MonoBehaviour {
         if (eatTimeGap <= Time.time - lastEatTime)
         {
             Debug.Log("time to eat");
+            Debug.Log(hunger);
             hunger--;
         }
 		
