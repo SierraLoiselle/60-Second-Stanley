@@ -9,9 +9,11 @@
 
         protected Transform spinner;
         protected bool spinning;
+        public GameObject waterbase;
 
         protected virtual void OnEnable()
         {
+            waterbase = GameObject.Find("FluvioWater4");
             spinning = false;
             linkedObject = (linkedObject == null ? GetComponent<VRTK_InteractableObject>() : linkedObject);
 
@@ -38,6 +40,9 @@
             if (spinning)
             {
                 spinner.transform.Rotate(new Vector3(0f, 0f, spinSpeed * Time.deltaTime));
+                float i = waterbase.transform.position.y;
+                i = i - .0002f;
+                waterbase.transform.position = new Vector3(0, i, 0);
             }
         }
 
