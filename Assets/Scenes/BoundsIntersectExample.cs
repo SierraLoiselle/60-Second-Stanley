@@ -45,7 +45,7 @@ public class BoundsIntersectExample : MonoBehaviour
             WaterFallSource.PlayOneShot(WaterfallSound, 0.7F);
             WaterSource.PlayOneShot(WaterSound, 0.5F);
         }
-        if(PersonCollider.bounds.Intersects(WaterCollider.bounds) && (!WaterFallSource.isPlaying || !WaterSource.isPlaying))
+        if (PlayerInWater == true && (!WaterFallSource.isPlaying || !WaterSource.isPlaying))
         {
             if(!WaterFallSource.isPlaying)
             {
