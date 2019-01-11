@@ -9,6 +9,7 @@ public class PlayerStatus : MonoBehaviour {
     public Text hungertext;
     public Text thirsttext;
     public Text drowningtext;
+    public Text alive;
     public float eatTimeGap;
     public float drinkTimeGap;
     public float hunger;
@@ -23,9 +24,6 @@ public class PlayerStatus : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-        hunger = 20;
-        thirst = 20;
-        drowning = 15;
         lastEatTime = Time.time;
         lastDrinkTime = Time.time;
         lastUWTime = Time.time;
@@ -42,29 +40,39 @@ public class PlayerStatus : MonoBehaviour {
         if (Time.time - lastDrinkTime >= drinkTimeGap)
         {
             thirst--;
+            lastDrinkTime = Time.time;
         }
         if (eatTimeGap <= Time.time - lastEatTime)
         {
             hunger--;
             lastEatTime = Time.time;
-            Debug.Log("WTF");
         }
 
         if (hunger <= 0 || thirst <= 0 || drowning <= 0)
         {
-            Debug.Log("you are dead");
-        }    
-        
-       
+            alive.text = "YOU IS DED!!!!!!!";
+            hungertext.text = "DED";
+            thirsttext.text = "DED";
+            drowningtext.text = "DEAD";
+
+
+        }
+
+
         DisplayScores();
 		
 	}
 
     public void EatButton ()
     {
-        hunger++;
-        Debug.Log("hunger has gone up");
+        hunger = 20;
     }
+
+    public void DrinkButton()
+    {
+        thirst = 20;
+    }
+
 
 
     private void DisplayScores ()
