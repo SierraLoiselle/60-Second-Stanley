@@ -47,6 +47,7 @@ namespace VRTK.Examples
         {
             if (currentIndex != portions.Length)
                 portions[currentIndex].SetActive(false);
+                 GameObject.Find("Stats").GetComponent<PlayerStatus>().EatButton();
             currentIndex++;
             if (currentIndex > portions.Length)
                 currentIndex = 0;
