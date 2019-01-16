@@ -15,9 +15,11 @@ public class PlayerStatus : MonoBehaviour {
     public float hunger;
     public float thirst;
     public float drowning;
+    public GameObject waterbase;
 
     private float lastEatTime;
     private float lastDrinkTime;
+    private float lastBreath;
     private float lastUWTime;
 
 
@@ -27,7 +29,9 @@ public class PlayerStatus : MonoBehaviour {
         lastEatTime = Time.time;
         lastDrinkTime = Time.time;
         lastUWTime = Time.time;
-	}
+        lastBreath = Time.time;
+        waterbase = GameObject.Find("FluvioWater4");
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -47,6 +51,12 @@ public class PlayerStatus : MonoBehaviour {
             hunger--;
             lastEatTime = Time.time;
         }
+        if (1 <= Time.time - lastBreath && waterbase.transform.position.y > 1.283 )
+        {
+            drowning--;
+            lastBreath = Time.time;
+        }
+       
 
         if (hunger <= 0 || thirst <= 0 || drowning <= 0)
         {
