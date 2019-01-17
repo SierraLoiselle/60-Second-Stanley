@@ -1,12 +1,17 @@
-﻿using UnityEngine;
+﻿
+using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
+
+
 [RequireComponent(typeof(SteamVR_LaserPointer))]
-public class VRUIInput : MonoBehaviour
+public class VRInput : MonoBehaviour
 {
     private SteamVR_LaserPointer laserPointer;
     private SteamVR_TrackedController trackedController;
+
+
 
     private void OnEnable()
     {
@@ -15,6 +20,8 @@ public class VRUIInput : MonoBehaviour
         laserPointer.PointerIn += HandlePointerIn;
         laserPointer.PointerOut -= HandlePointerOut;
         laserPointer.PointerOut += HandlePointerOut;
+
+
 
         trackedController = GetComponent<SteamVR_TrackedController>();
         if (trackedController == null)
@@ -25,6 +32,8 @@ public class VRUIInput : MonoBehaviour
         trackedController.TriggerClicked += HandleTriggerClicked;
     }
 
+
+
     private void HandleTriggerClicked(object sender, ClickedEventArgs e)
     {
         if (EventSystem.current.currentSelectedGameObject != null)
@@ -32,6 +41,8 @@ public class VRUIInput : MonoBehaviour
             ExecuteEvents.Execute(EventSystem.current.currentSelectedGameObject, new PointerEventData(EventSystem.current), ExecuteEvents.submitHandler);
         }
     }
+
+
 
     private void HandlePointerIn(object sender, PointerEventArgs e)
     {
@@ -43,9 +54,11 @@ public class VRUIInput : MonoBehaviour
         }
     }
 
+
+
     private void HandlePointerOut(object sender, PointerEventArgs e)
     {
-        
+
         var button = e.target.GetComponent<Button>();
         if (button != null)
         {
