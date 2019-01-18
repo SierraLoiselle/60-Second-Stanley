@@ -23,7 +23,7 @@ public class WaterAppear : MonoBehaviour {
         if(IsThereWater == true)
         {
             float i = waterbase.transform.position.y;
-            i = i + .0001f;
+            i = i + .001f;
             waterbase.transform.position = new Vector3(0, i, 0);
         }
 	}

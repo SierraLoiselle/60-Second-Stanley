@@ -43,7 +43,7 @@ public class PlayerStatus : MonoBehaviour {
         }
         if (Time.time - lastDrinkTime >= drinkTimeGap)
         {
-            thirst--;
+            //thirst--;
             lastDrinkTime = Time.time;
         }
         if (eatTimeGap <= Time.time - lastEatTime)
@@ -55,6 +55,10 @@ public class PlayerStatus : MonoBehaviour {
         {
             drowning--;
             lastBreath = Time.time;
+        }
+        if(waterbase.transform.position.y < 1.283 && drowning != 20)
+        {
+            drowning = 20;
         }
        
 
