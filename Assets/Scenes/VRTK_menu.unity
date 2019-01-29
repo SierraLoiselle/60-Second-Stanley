@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.30692244, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -532,10 +532,10 @@ MonoBehaviour:
   activateOnEnable: 0
   activationDelay: 0
   selectionButton: 10
-  selectOnPress: 0
+  selectOnPress: 1
   selectionDelay: 0
   selectAfterHoverDuration: 0
-  interactWithObjects: 0
+  interactWithObjects: 1
   grabToPointerTip: 0
   attachedTo: {fileID: 0}
   controllerEvents: {fileID: 0}
@@ -881,6 +881,7 @@ GameObject:
   - component: {fileID: 243470044}
   - component: {fileID: 243470043}
   - component: {fileID: 243470042}
+  - component: {fileID: 243470045}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -982,6 +983,18 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 243470040}
   m_CullTransparentMesh: 0
+--- !u!65 &243470045
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 243470040}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 156.53389, y: 26.385296, z: 0}
+  m_Center: {x: -0.62173605, y: -0.10612905, z: 0.49999952}
 --- !u!1 &252843285
 GameObject:
   m_ObjectHideFlags: 0
@@ -4714,6 +4727,7 @@ GameObject:
   - component: {fileID: 1618916006}
   - component: {fileID: 1618916005}
   - component: {fileID: 1618916004}
+  - component: {fileID: 1618916007}
   m_Layer: 5
   m_Name: Button (1)
   m_TagString: Untagged
@@ -4815,6 +4829,18 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1618916002}
   m_CullTransparentMesh: 0
+--- !u!65 &1618916007
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1618916002}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 158.39226, y: 29.143208, z: 0}
+  m_Center: {x: 0.44781566, y: -0.03863275, z: 0.49996376}
 --- !u!1 &1623473337
 GameObject:
   m_ObjectHideFlags: 0
@@ -5014,7 +5040,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 399, y: -70}
+  m_AnchoredPosition: {x: 867, y: -70}
   m_SizeDelta: {x: 142, y: 120}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1671559155
@@ -5642,10 +5668,10 @@ MonoBehaviour:
   activateOnEnable: 0
   activationDelay: 0
   selectionButton: 10
-  selectOnPress: 0
+  selectOnPress: 1
   selectionDelay: 0
   selectAfterHoverDuration: 0
-  interactWithObjects: 0
+  interactWithObjects: 1
   grabToPointerTip: 0
   attachedTo: {fileID: 0}
   controllerEvents: {fileID: 0}
