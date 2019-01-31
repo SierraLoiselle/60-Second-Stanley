@@ -1646,7 +1646,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 867, y: -70}
+  m_AnchoredPosition: {x: 861, y: -70}
   m_SizeDelta: {x: 142, y: 120}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &670205636
@@ -3438,9 +3438,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5cd863d6aeb2b9a4ba5aa8a61f8a9c51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_MyObject: {fileID: 1465235328}
-  m_NewObject: {fileID: 102366466}
-  music: {fileID: 8300000, guid: 5471c3f3757445242972d00ca3e97a20, type: 3}
+  PersonObject: {fileID: 0}
+  WaterObject: {fileID: 0}
+  WaterfallObject: {fileID: 0}
+  WaterfallSound: {fileID: 0}
+  WaterSound: {fileID: 0}
 --- !u!4 &1717197941
 Transform:
   m_ObjectHideFlags: 0

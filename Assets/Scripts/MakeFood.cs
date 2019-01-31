@@ -14,6 +14,11 @@ public class MakeFood : MonoBehaviour {
     public Rigidbody SteakPrefab;
     public Rigidbody StewPrefab;
     public Rigidbody WMelonPrefab;
+    public Rigidbody Beerprefab;
+    public Rigidbody BigPotionPrefab;
+    public Rigidbody SmallPotionPrefab;
+    public Rigidbody WinebottlePrefab;
+    public Rigidbody Winejugprefab;
     public float minxpos;
     public float maxxpos;
     public float minzpos;
