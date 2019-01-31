@@ -32,6 +32,7 @@
             if (outputOnMax != "")
             {
                 Debug.Log(outputOnMax);
+                GameObject.Find("PlayerMover").GetComponent<Moving>().PickingRoom();
             }
         }
 

@@ -283,7 +283,8 @@ namespace VRTK.Controllables.PhysicsBased
             {
                 SetRigidbodyConstraints(RigidbodyConstraints.FreezeAll);
                 pressedDown = true;
-                GameObject.Find("PlayerMover").GetComponent<Moving>().PickingRoom();
+                
+                
             }
         }
     }
