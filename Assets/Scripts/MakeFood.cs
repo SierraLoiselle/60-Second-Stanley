@@ -33,9 +33,9 @@ public class MakeFood : MonoBehaviour {
 
 
 
-        for (int i = 0; i < 10; i++)
+        for (int i = 0; i < 16; i++)
         {
-            if (i<1)
+            if (i < 1)
             {
                 FoodInstance = BreadPrefab;
             }
@@ -74,6 +74,26 @@ public class MakeFood : MonoBehaviour {
             else if (i < 10)
             {
                 FoodInstance = WMelonPrefab;
+            }
+            else if (i < 11)
+            {
+                FoodInstance = Beerprefab;
+            }
+            else if (i < 12)
+            {
+                FoodInstance = BigPotionPrefab;
+            }
+            else if (i < 13)
+            {
+                FoodInstance = SmallPotionPrefab;
+            }
+            else if (i < 14)
+            {
+                FoodInstance = WinebottlePrefab;
+            }
+            else if (i < 15)
+            {
+                FoodInstance = Winejugprefab;
             }
 
             FoodInstance.transform.position = new Vector3(Random.Range(minxpos, maxxpos), .5f, Random.Range(minzpos, maxzpos));

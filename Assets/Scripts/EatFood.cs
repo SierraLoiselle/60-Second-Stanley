@@ -40,6 +40,15 @@ namespace VRTK.Examples
             {
                 Debug.Log("rhurhir");
                 DestroyObject(gameObject);
+                if (linkedObject.CompareTag("Food"))
+                {
+                    GameObject.Find("Stats").GetComponent<PlayerStatus>().EatButton();
+                }
+                else if (linkedObject.CompareTag("Drink"))
+                {
+                    GameObject.Find("Stats").GetComponent<PlayerStatus>().DrinkButton();
+                }
+                
             }
         }
 
@@ -47,7 +56,6 @@ namespace VRTK.Examples
         {
             if (currentIndex != portions.Length)
                 portions[currentIndex].SetActive(false);
-                 GameObject.Find("Stats").GetComponent<PlayerStatus>().EatButton();
             currentIndex++;
             if (currentIndex > portions.Length)
                 currentIndex = 0;
