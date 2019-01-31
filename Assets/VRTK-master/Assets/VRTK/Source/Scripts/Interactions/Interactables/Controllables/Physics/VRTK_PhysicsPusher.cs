@@ -283,6 +283,8 @@ namespace VRTK.Controllables.PhysicsBased
             {
                 SetRigidbodyConstraints(RigidbodyConstraints.FreezeAll);
                 pressedDown = true;
+                
+                
             }
         }
     }
