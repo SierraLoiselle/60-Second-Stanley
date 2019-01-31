@@ -9,7 +9,7 @@ public class Moving : MonoBehaviour {
     // Use this for initialization
     void Start () {
 
-		if(cameraRigTransformv.activeInHierarchy == true)
+		if(cameraRigTransformv.activeSelf == true)
         {
             gameMode = true;
             Debug.Log("AHHHHHHHHHH");
@@ -23,20 +23,24 @@ public class Moving : MonoBehaviour {
 
     // Update is called once per frame
     void Update () {
-		   
-        
-      
-	}
+
+        if (cameraRigTransformv.activeSelf == true)
+        {
+            gameMode = true;
+            Debug.Log("AHHHHHHHHHH");
+        }
+
+    }
 
     public void ToCollectionRoom()
     {
         if(gameMode == true)
         {
-            cameraRigTransformv.transform.position = new Vector3(-52.635f, 1.28f, -25.355f);
+            cameraRigTransformv.transform.position = new Vector3(-54.683f, 1.953897f, -24.799f);
         }
         else
         {
-            cameraRigTransformf.transform.position = new Vector3(-52.63f, 1.28f, -25.355f);
+            cameraRigTransformf.transform.position = new Vector3(-54.683f, 1.953897f, -24.799f);
         }
 
     }
