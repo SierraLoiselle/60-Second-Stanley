@@ -36,11 +36,11 @@ public class Moving : MonoBehaviour {
     {
         if(gameMode == true)
         {
-            cameraRigTransformv.transform.position = new Vector3(-54.683f, 1.953897f, -24.799f);
+            cameraRigTransformv.transform.position = new Vector3(-53.5f, 2.056f, -25.346f);
         }
         else
         {
-            cameraRigTransformf.transform.position = new Vector3(-54.683f, 1.953897f, -24.799f);
+            cameraRigTransformf.transform.position = new Vector3(-53.5f, 2.056f, -25.346f);
         }
 
     }
