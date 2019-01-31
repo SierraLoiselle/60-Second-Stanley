@@ -5,8 +5,6 @@ using UnityEngine;
 public class Moving : MonoBehaviour {
     public GameObject cameraRigTransformv;
     public GameObject cameraRigTransformf;
-    public GameObject headTransformv;
-    public GameObject headTransformf;
     private bool gameMode;
     // Use this for initialization
     void Start () {
@@ -32,11 +30,37 @@ public class Moving : MonoBehaviour {
 
     public void ToCollectionRoom()
     {
+        if(gameMode == true)
+        {
+            cameraRigTransformv.transform.position = new Vector3(-53.957f, 1.95f, -25.355f);
+        }
+        else
+        {
+            cameraRigTransformf.transform.position = new Vector3(-53.957f, 1.95f, -25.355f);
+        }
 
     }
     public void ToLockedRoom()
     {
-
+        if (gameMode == true)
+        {
+            cameraRigTransformv.transform.position = new Vector3(0f, 0f, 0f);
+        }
+        else
+        {
+            cameraRigTransformf.transform.position = new Vector3(0f, 0f, 0f);
+        }
+    }
+    public void PickingRoom()
+    {
+        if(cameraRigTransformv.transform.position.y == 0 || cameraRigTransformf.transform.position.y == 0)
+        {
+            ToCollectionRoom();
+        }
+        else
+        {
+            ToLockedRoom();
+        }
     }
 
 
