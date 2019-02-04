@@ -67,16 +67,15 @@ public class Moving : MonoBehaviour {
         if(cameraRigTransformv.transform.position.x == 0 && gameMode == true)
         {
             ToCollectionRoom();
-            Debug.Log("to collection room");
+            
         }
         else if(cameraRigTransformf.transform.position.x == 0 && gameMode == false){
             ToCollectionRoom();
-            Debug.Log("to collection room");
+           
         }
         else
         {
             ToLockedRoom();
-            Debug.Log("To locked room");
         }
     }
 
