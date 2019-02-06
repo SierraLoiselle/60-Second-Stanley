@@ -291,6 +291,7 @@ namespace VRTK
             if (SelectionButtonPressed != null)
             {
                 SelectionButtonPressed(this, e);
+
             }
         }
 

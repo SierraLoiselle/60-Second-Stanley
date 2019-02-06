@@ -613,17 +613,20 @@ namespace VRTK
         protected virtual void DoSelectionButtonPressed(object sender, ControllerInteractionEventArgs e)
         {
             OnSelectionButtonPressed(controllerEvents.SetControllerEvent(ref selectionButtonPressed, true));
+            Debug.Log("Selection Button Pressed");
         }
 
         protected virtual void DoSelectionButtonReleased(object sender, ControllerInteractionEventArgs e)
         {
             OnSelectionButtonReleased(controllerEvents.SetControllerEvent(ref selectionButtonPressed, false));
+            Debug.Log("Selection Button Released");
         }
 
         protected virtual void SelectionButtonAction(object sender, ControllerInteractionEventArgs e)
         {
             controllerReference = e.controllerReference;
             ExecuteSelectionButtonAction();
+            Debug.Log("Execute Action");
         }
 
         protected virtual void ExecuteSelectionButtonAction()
@@ -633,6 +636,7 @@ namespace VRTK
                 wasActivated = false;
                 RaycastHit pointerRendererDestinationHit = pointerRenderer.GetDestinationHit();
                 AttemptUseOnSet(pointerRendererDestinationHit.transform);
+                Debug.Log("Use Object");
                 if (pointerRendererDestinationHit.transform && IsPointerActive() && pointerRenderer.ValidPlayArea() && !PointerActivatesUseAction(pointerInteractableObject) && pointerRenderer.IsValidCollision())
                 {
                     ResetHoverSelectionTimer(pointerRendererDestinationHit.collider);
@@ -748,6 +752,7 @@ namespace VRTK
             {
                 RaycastHit pointerRendererDestinationHit = pointerRenderer.GetDestinationHit();
                 eventPayload = SetDestinationMarkerEvent(pointerRendererDestinationHit.distance, pointerRendererDestinationHit.transform, pointerRendererDestinationHit, pointerRendererDestinationHit.point, controllerReference, false, GetCursorRotation());
+                Debug.Log("Got Target");
             }
             return eventPayload;
         }
