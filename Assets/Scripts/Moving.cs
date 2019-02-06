@@ -15,12 +15,12 @@ public class Moving : MonoBehaviour {
 		if(cameraRigTransformv.activeSelf == true)
         {
             gameMode = true;
-            Debug.Log("AHHHHHHHHHH");
+            
         }
         else
         {
             gameMode = false;
-            Debug.Log("ahhhhhhhhhh");
+           
         }
     }
 
@@ -30,7 +30,7 @@ public class Moving : MonoBehaviour {
         if (cameraRigTransformv.activeSelf == true)
         {
             gameMode = true;
-            Debug.Log("AHHHHHHHHHH");
+           
         }
 
     }
@@ -39,12 +39,12 @@ public class Moving : MonoBehaviour {
     {
         if(gameMode == true)
         {
-            cameraRigTransformv.transform.position = new Vector3(-53.5f, 2.056f, -25.346f);
+            cameraRigTransformv.transform.position = new Vector3(-53.5f, 1.95f, -25.346f);
             room = true;
         }
         else
         {
-            cameraRigTransformf.transform.position = new Vector3(-53.5f, 2.056f, -25.346f);
+            cameraRigTransformf.transform.position = new Vector3(-53.5f, 1.95f, -25.346f);
             room = true;
         }
 

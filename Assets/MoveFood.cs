@@ -27,7 +27,8 @@
         {
             if (linkedObject.transform.position.y < 1.9 && teleport == true)
             {
-                linkedObject.transform.position = new Vector3(0f, .55f, 0f);
+                linkedObject.transform.position = new Vector3(0f, .55f, .4f);
+                teleport = false;
             }
         }
         protected virtual void OnEnable()

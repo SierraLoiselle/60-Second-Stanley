@@ -43,6 +43,7 @@ GameObject:
   - component: {fileID: 54165317994466988}
   - component: {fileID: 114375551361931148}
   - component: {fileID: 114359994827828698}
+  - component: {fileID: 114464619818464174}
   m_Layer: 0
   m_Name: foodCake
   m_TagString: Food
@@ -160,7 +161,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1387270346305350}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -53.171894, y: 1.95, z: -25.414326}
+  m_LocalPosition: {x: -53.112724, y: 1.95, z: -25.424053}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4742789481507054}
@@ -456,6 +457,18 @@ MonoBehaviour:
   objectHighlighter: {fileID: 0}
   touchHighlightColor: {r: 0, g: 0, b: 0, a: 0}
   usingState: 0
+--- !u!114 &114464619818464174
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1387270346305350}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0656010585cfeb448870949c990471da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  linkedObject: {fileID: 0}
 --- !u!114 &114700011425335730
 MonoBehaviour:
   m_ObjectHideFlags: 1
