@@ -27,7 +27,7 @@
         {
             if (linkedObject.transform.position.y < 1.9 && teleport == true)
             {
-                linkedObject.transform.position = new Vector3(0f, 0f, 0f);
+                linkedObject.transform.position = new Vector3(0f, .55f, 0f);
             }
         }
         protected virtual void OnEnable()
@@ -35,22 +35,14 @@
           
             linkedObject = (linkedObject == null ? GetComponent<VRTK_InteractableObject>() : linkedObject);
 
-            if (linkedObject != null)
-            {
-                linkedObject.InteractableObjectUsed += InteractableObjectUsed;
-                linkedObject.InteractableObjectUnused += InteractableObjectUnused;
-            }
+           
 
             
         }
 
         protected virtual void OnDisable()
         {
-            if (linkedObject != null)
-            {
-                linkedObject.InteractableObjectUsed -= InteractableObjectUsed;
-                linkedObject.InteractableObjectUnused -= InteractableObjectUnused;
-            }
+            
         }
     }
 }
