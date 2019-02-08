@@ -19,6 +19,6 @@ public class SceneChanger : MonoBehaviour {
 
     public void StartButton ()
     {
-        EditorSceneManager.LoadScene("Collection Room");
+        EditorSceneManager.LoadScene("Locked Room");
     }
 }
