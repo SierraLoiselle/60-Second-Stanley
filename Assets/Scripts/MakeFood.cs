@@ -96,7 +96,7 @@ public class MakeFood : MonoBehaviour {
                 FoodInstance = Winejugprefab;
             }
 
-            FoodInstance.transform.position = new Vector3(Random.Range(minxpos, maxxpos), .5f, Random.Range(minzpos, maxzpos));
+            FoodInstance.transform.position = new Vector3(Random.Range(minxpos, maxxpos), 1.95f, Random.Range(minzpos, maxzpos));
             foodStuff.Add(FoodInstance);
             Instantiate(foodStuff[i]);
             Debug.Log("i = " + i + " : " + foodStuff[i].transform.position);

@@ -16,6 +16,7 @@ public class PlayerStatus : MonoBehaviour {
     public float thirst;
     public float drowning;
     public GameObject waterbase;
+    public bool room;
 
     private float lastEatTime;
     private float lastDrinkTime;
@@ -36,22 +37,22 @@ public class PlayerStatus : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-
+        room = GameObject.Find("PlayerMover").GetComponent<Moving>().room;
         if (Time.time - lastUWTime >= 1)
         {
             lastUWTime--;
         }
-        if (Time.time - lastDrinkTime >= drinkTimeGap)
+        if (Time.time - lastDrinkTime >= drinkTimeGap && room == false)
         {
-            //thirst--;
+            thirst--;
             lastDrinkTime = Time.time;
         }
-        if (eatTimeGap <= Time.time - lastEatTime)
+        if (eatTimeGap <= Time.time - lastEatTime && room == false)
         {
             hunger--;
             lastEatTime = Time.time;
         }
-        if (1 <= Time.time - lastBreath && waterbase.transform.position.y > 1.283 )
+        if (1 <= Time.time - lastBreath && waterbase.transform.position.y > 1.283 && room == false )
         {
             drowning--;
             lastBreath = Time.time;

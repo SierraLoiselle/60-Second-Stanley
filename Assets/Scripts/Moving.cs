@@ -5,19 +5,22 @@ using UnityEngine;
 public class Moving : MonoBehaviour {
     public GameObject cameraRigTransformv;
     public GameObject cameraRigTransformf;
+    public bool room;
+    //false = locked room
+    // true = collection room
     private bool gameMode;
     // Use this for initialization
     void Start () {
-
+        room = false;
 		if(cameraRigTransformv.activeSelf == true)
         {
             gameMode = true;
-            Debug.Log("AHHHHHHHHHH");
+            
         }
         else
         {
             gameMode = false;
-            Debug.Log("ahhhhhhhhhh");
+           
         }
     }
 
@@ -27,7 +30,7 @@ public class Moving : MonoBehaviour {
         if (cameraRigTransformv.activeSelf == true)
         {
             gameMode = true;
-            Debug.Log("AHHHHHHHHHH");
+           
         }
 
     }
@@ -36,11 +39,13 @@ public class Moving : MonoBehaviour {
     {
         if(gameMode == true)
         {
-            cameraRigTransformv.transform.position = new Vector3(-53.5f, 2.056f, -25.346f);
+            cameraRigTransformv.transform.position = new Vector3(-53.5f, 1.95f, -25.346f);
+            room = true;
         }
         else
         {
-            cameraRigTransformf.transform.position = new Vector3(-53.5f, 2.056f, -25.346f);
+            cameraRigTransformf.transform.position = new Vector3(-53.5f, 1.95f, -25.346f);
+            room = true;
         }
 
     }
@@ -49,17 +54,24 @@ public class Moving : MonoBehaviour {
         if (gameMode == true)
         {
             cameraRigTransformv.transform.position = new Vector3(0f, 0f, 0f);
+            room = false;
         }
         else
         {
             cameraRigTransformf.transform.position = new Vector3(0f, 0f, 0f);
+            room = false;
         }
     }
     public void PickingRoom()
     {
-        if(cameraRigTransformv.transform.position.y == 0 || cameraRigTransformf.transform.position.y == 0)
+        if(cameraRigTransformv.transform.position.x == 0 && gameMode == true)
         {
             ToCollectionRoom();
+            
+        }
+        else if(cameraRigTransformf.transform.position.x == 0 && gameMode == false){
+            ToCollectionRoom();
+           
         }
         else
         {

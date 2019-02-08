@@ -41,7 +41,7 @@
             {
                 spinner.transform.Rotate(new Vector3(0f, 0f, spinSpeed * Time.deltaTime));
                 float i = waterbase.transform.position.y;
-                i = i - .002f;
+                i = i - .0002f;
                 waterbase.transform.position = new Vector3(0, i, 0);
             }
         }

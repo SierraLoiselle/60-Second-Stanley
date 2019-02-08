@@ -42,6 +42,7 @@ namespace VRTK.Examples
                 DestroyObject(gameObject);
                 if (linkedObject.CompareTag("Food"))
                 {
+                    Debug.Log("We should be eating");
                     GameObject.Find("Stats").GetComponent<PlayerStatus>().EatButton();
                 }
                 else if (linkedObject.CompareTag("Drink"))

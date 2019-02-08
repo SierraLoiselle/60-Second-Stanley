@@ -60,6 +60,7 @@ GameObject:
   - component: {fileID: 54597844310364802}
   - component: {fileID: 114898663164381080}
   - component: {fileID: 114642564050290562}
+  - component: {fileID: 114117106551268932}
   m_Layer: 0
   m_Name: WineJug
   m_TagString: Drink
@@ -108,7 +109,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1237884354238378}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.67013574, y: 0.5, z: 0.5050976}
+  m_LocalPosition: {x: -53.528397, y: 1.95, z: -25.003014}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4501419395479100}
@@ -407,6 +408,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.14153871, y: 0.23112005, z: 0.18184768}
   m_Center: {x: -0.000030260535, y: -0.00042103595, z: -0.0032108387}
+--- !u!114 &114117106551268932
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1237884354238378}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0656010585cfeb448870949c990471da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  linkedObject: {fileID: 0}
 --- !u!114 &114426453612372724
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -453,7 +466,7 @@ MonoBehaviour:
   allowedNearTouchControllers: 0
   allowedTouchControllers: 0
   ignoredColliders: []
-  isGrabbable: 0
+  isGrabbable: 1
   holdButtonToGrab: 1
   stayGrabbedOnTeleport: 1
   validDrop: 1
@@ -461,9 +474,9 @@ MonoBehaviour:
   allowedGrabControllers: 0
   grabAttachMechanicScript: {fileID: 0}
   secondaryGrabActionScript: {fileID: 0}
-  isUsable: 0
+  isUsable: 1
   holdButtonToUse: 1
-  useOnlyIfGrabbed: 0
+  useOnlyIfGrabbed: 1
   pointerActivatesUseAction: 0
   useOverrideButton: 0
   allowedUseControllers: 0

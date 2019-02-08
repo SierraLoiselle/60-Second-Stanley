@@ -8,6 +8,7 @@ public class WaterAppear : MonoBehaviour {
     private GameObject oil;
     public GameObject waterbase;
     public bool IsThereWater;
+    public bool room;
     // Use this for initialization
 	void Start () {
         IsThereWater = false;
@@ -20,10 +21,11 @@ public class WaterAppear : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if(IsThereWater == true)
+        room = GameObject.Find("PlayerMover").GetComponent<Moving>().room;
+        if (IsThereWater == true && room == false)
         {
             float i = waterbase.transform.position.y;
-            i = i + .001f;
+            i = i + .0001f;
             waterbase.transform.position = new Vector3(0, i, 0);
         }
 	}
