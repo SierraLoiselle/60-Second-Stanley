@@ -173,6 +173,7 @@ namespace VRTK
         /// Emitted when the UI Pointer has clicked the currently collided UI element.
         /// </summary>
         public event UIPointerEventHandler UIPointerElementClick;
+
         /// <summary>
         /// Emitted when the UI Pointer begins dragging a valid UI element.
         /// </summary>
@@ -237,6 +238,7 @@ namespace VRTK
                 if (attemptClickOnDeactivate && !e.isActive && e.previousTarget)
                 {
                     pointerEventData.pointerPress = e.previousTarget;
+                    
                 }
             }
         }
@@ -251,6 +253,7 @@ namespace VRTK
             if (UIPointerElementClick != null)
             {
                 UIPointerElementClick(this, e);
+                Debug.Log("UI attempt click");
             }
         }
 
@@ -275,6 +278,7 @@ namespace VRTK
             if (ActivationButtonPressed != null)
             {
                 ActivationButtonPressed(this, e);
+                Debug.Log("UI Activation Button Pressed");
             }
         }
 
@@ -283,6 +287,7 @@ namespace VRTK
             if (ActivationButtonReleased != null)
             {
                 ActivationButtonReleased(this, e);
+                Debug.Log("UI Activation Button Released");
             }
         }
 
@@ -291,6 +296,8 @@ namespace VRTK
             if (SelectionButtonPressed != null)
             {
                 SelectionButtonPressed(this, e);
+                Debug.Log("UI Selection Button Pressed");
+
             }
         }
 
@@ -299,6 +306,7 @@ namespace VRTK
             if (SelectionButtonReleased != null)
             {
                 SelectionButtonReleased(this, e);
+                Debug.Log("UI Selection Button Released");
             }
         }
 
@@ -497,21 +505,25 @@ namespace VRTK
         protected virtual void DoActivationButtonPressed(object sender, ControllerInteractionEventArgs e)
         {
             OnActivationButtonPressed(controllerEvents.SetControllerEvent());
+            
         }
 
         protected virtual void DoActivationButtonReleased(object sender, ControllerInteractionEventArgs e)
         {
+            
             OnActivationButtonReleased(controllerEvents.SetControllerEvent());
         }
 
         protected virtual void DoSelectionButtonPressed(object sender, ControllerInteractionEventArgs e)
         {
             OnSelectionButtonPressed(controllerEvents.SetControllerEvent());
+            
         }
 
         protected virtual void DoSelectionButtonReleased(object sender, ControllerInteractionEventArgs e)
         {
             OnSelectionButtonReleased(controllerEvents.SetControllerEvent());
+            
         }
 
         protected virtual VRTK_ControllerReference GetControllerReference(GameObject reference = null)
