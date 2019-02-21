@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028334, g: 0.2257134, b: 0.30692226, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -538,7 +538,7 @@ Prefab:
     - target: {fileID: 224000012623161658, guid: d46cf6b1ad9d84a48ae7548a2a6b41b3,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 675
+      value: 1094
       objectReference: {fileID: 0}
     - target: {fileID: 224000012623161658, guid: d46cf6b1ad9d84a48ae7548a2a6b41b3,
         type: 2}
@@ -11626,11 +11626,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BestTimesText:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 1418117331}
+  - {fileID: 1855744444}
+  - {fileID: 714799843}
+  - {fileID: 142004723}
+  - {fileID: 1181731278}
+  BestNamesText:
+  - {fileID: 1499112004}
+  - {fileID: 330091388}
+  - {fileID: 341659420}
+  - {fileID: 812599452}
+  - {fileID: 980437513}
+  PlayerName: {fileID: 587920287}
 --- !u!4 &539622063
 Transform:
   m_ObjectHideFlags: 0
@@ -19460,7 +19467,7 @@ GameObject:
   - component: {fileID: 980437514}
   - component: {fileID: 980437513}
   m_Layer: 5
-  m_Name: Time (4)
+  m_Name: Text (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
