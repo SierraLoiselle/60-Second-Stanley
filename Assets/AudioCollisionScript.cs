@@ -9,17 +9,30 @@ public class AudioCollisionScript : MonoBehaviour {
     private Collider tempFood;
     public GameObject tile;
     private Collider tileCollider;
-    private AudioSource owo;
+    private AudioSource audioSource;
+    public AudioClip audioClip;
+    private List<bool> BoolsForFood;
+    private int counter;
+    
 
 
     void Start () {
-        if(foods==null)
+        counter = 0;
+        BoolsForFood = new List<bool>();
+        if (foods==null)
         {
             foods = GameObject.FindGameObjectsWithTag("Food");
+            Debug.Log(foods.Length.ToString() + " objects found");
+            foreach(GameObject food in foods)
+            {
+                BoolsForFood.Add(false);
+                Debug.Log(BoolsForFood.ToArray().Length.ToString() + " bools created");
+            }
         }
         if(tile!=null)
         {
             tileCollider = tile.GetComponent<Collider>();
+            Debug.Log("tile collider found and assigned");
         }
 
 		
@@ -27,14 +40,26 @@ public class AudioCollisionScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		foreach (GameObject food in foods)
+        
+
+        foreach (GameObject food in foods)
         {
+            
             tempFood = food.GetComponent<Collider>();
-            owo = food.GetComponent<>
+            audioSource = food.GetComponent<AudioSource>();
             if (tempFood.bounds.Intersects(tileCollider.bounds))
             {
-
+                Debug.Log("")
+                audioSource.PlayOneShot(audioClip, 0.5f);
+                BoolsForFood[counter] = true;
             }
+            else
+            {
+                BoolsForFood[counter] = false;
+            }
+            counter++;
         }
+        counter = 0;
+
 	}
 }
