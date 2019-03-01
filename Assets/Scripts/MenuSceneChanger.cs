@@ -1,11 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEditor.SceneManagement;
 using UnityEngine.UI;
-using UnityEngine.SceneManagement;
 
-public class bob : MonoBehaviour {
+public class MenuSceneChanger : MonoBehaviour {
 
     // Use this for initialization
     void Start() {
@@ -20,6 +19,6 @@ public class bob : MonoBehaviour {
 
     public void StartButton ()
     {
-        SceneManager.LoadScene("Collection Room");
+        EditorSceneManager.LoadScene("Locked Room w water and audio");
     }
 }
