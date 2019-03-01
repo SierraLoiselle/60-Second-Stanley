@@ -9,22 +9,13 @@ public class ScoreBoardScript : MonoBehaviour {
     public Text[] BestTimesText;
     public Text[] BestNamesText;
     public Text PlayerName;
+    public InputField Name; 
 
     private float[] BestTimes;
     private Text[] BestNamesPrivate;
 
     private void Start()
     {
-        //setting size
-        BestTimes = new float[6];
-        for (int x = 0; x < BestTimesText.Length; x++)
-        {
-            BestTimes[x] = PlayerPrefs.GetFloat("highScoreValues" + x);
-            BestNamesPrivate[x].text = PlayerPrefs.GetString("highScoreNames" + x);
-
-        }
-        DrawScores();
-        CheckForHighScore(PlayerPrefs.GetFloat("PlayerScore"), PlayerName);
 
     }
 
@@ -72,6 +63,21 @@ public class ScoreBoardScript : MonoBehaviour {
             BestNamesText[x] = PlayerName; 
             
         }
+    }
+
+    public void NameWasEntered()
+    {
+        PlayerName.text = Name.text;
+        //setting size
+        BestTimes = new float[6];
+        for (int x = 0; x < BestTimesText.Length; x++)
+        {
+            BestTimes[x] = PlayerPrefs.GetFloat("highScoreValues" + x);
+            BestNamesPrivate[x].text = PlayerPrefs.GetString("highScoreNames" + x);
+
+        }
+        DrawScores();
+        CheckForHighScore(PlayerPrefs.GetFloat("PlayerScore"), PlayerName);
     }
 
 }
