@@ -16,7 +16,11 @@ public class ScoreBoardScript : MonoBehaviour {
 
     private void Start()
     {
-
+        for (int x = 0; x < BestTimesText.Length; x++)
+        {
+            PlayerPrefs.SetFloat("highScoreValues" + x, BestTimes[x]);
+            PlayerPrefs.SetString("highScoreNames" + x, "None");
+        }
     }
 
     private void SaveScores()
@@ -60,7 +64,7 @@ public class ScoreBoardScript : MonoBehaviour {
             string minutes = ((int)BestTimes[x] / 60).ToString();
             string seconds = (BestTimes[x] % 60).ToString("f2");
             BestTimesText[x].text = minutes + ":" + seconds;
-            BestNamesText[x] = PlayerName; 
+            BestNamesText[x] = BestNamesPrivate[x]; 
             
         }
     }
@@ -78,6 +82,7 @@ public class ScoreBoardScript : MonoBehaviour {
         }
         DrawScores();
         CheckForHighScore(PlayerPrefs.GetFloat("PlayerScore"), PlayerName);
+        Debug.Log("name was entered");
     }
 
 }

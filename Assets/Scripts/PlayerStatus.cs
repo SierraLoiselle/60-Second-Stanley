@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PlayerStatus : MonoBehaviour {
 
@@ -17,6 +18,7 @@ public class PlayerStatus : MonoBehaviour {
     public float drowning;
     public GameObject waterbase;
     public bool room;
+    public bool gameover;
 
     private float lastEatTime;
     private float lastDrinkTime;
@@ -32,6 +34,7 @@ public class PlayerStatus : MonoBehaviour {
         lastUWTime = Time.time;
         lastBreath = Time.time;
         waterbase = GameObject.Find("FluvioWater4");
+        gameover = false;
     }
 	
 	// Update is called once per frame
@@ -69,6 +72,8 @@ public class PlayerStatus : MonoBehaviour {
             hungertext.text = "DED";
             thirsttext.text = "DED";
             drowningtext.text = "DEAD";
+            gameover = true;
+            SceneManager.LoadScene("Score Board");
 
 
         }

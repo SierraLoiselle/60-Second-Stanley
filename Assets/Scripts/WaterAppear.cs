@@ -12,6 +12,7 @@ public class WaterAppear : MonoBehaviour {
     public GameObject waterbase;
     public bool IsThereWater;
     public bool room;
+    private float t; 
     // Use this for initialization
 	void Start () {
         IsThereWater = false;
