@@ -14,13 +14,14 @@ public class AudioCollisionScript : MonoBehaviour {
     private List<bool> BoolsForFood;
     private int counter;
     private int updtCount;
+    private GameObject food;
     
 
 
     void Start () {
-        
 
 
+        updtCount = 0;
 		
 	}
 	
@@ -51,32 +52,30 @@ public class AudioCollisionScript : MonoBehaviour {
         }
         if (updtCount > 30)
         {
-            foreach (GameObject food in foods)
+            for (int x = 0; x < foods.Length; x++)
             {
                 Debug.Log("length = " + foods.Length.ToString());
+                Debug.Log("currentX = " + x.ToString());
+                food = foods[x];
                 tempFood = food.GetComponent<Collider>();
                 audioSource = food.GetComponent<AudioSource>();
-                Debug.Log("counter = " + counter.ToString());
-                if (tempFood.bounds.Intersects(tileCollider.bounds) && BoolsForFood[counter] == false)
+                if (tempFood.bounds.Intersects(tileCollider.bounds))
                 {
                     Debug.Log("Food is Intersecting with water");
-                    audioSource.PlayOneShot(audioClip, 0.5f);
-                    Debug.Log("Audio is playing");
-                    BoolsForFood[counter] = true;
+                    if (BoolsForFood[x] == false)
+                    {
+                        audioSource.PlayOneShot(audioClip, 0.5f);
+                        BoolsForFood[x] = true;
+                        Debug.Log("Audio is playing");
+                    } 
                 }
                 else if (!tempFood.bounds.Intersects(tileCollider.bounds))
                 {
                     Debug.Log("Food is not intersecting with water");
-                    BoolsForFood[counter] = false;
+                    BoolsForFood[x] = false;
                 }
-                if(foods.Length == counter)
-                {
-                    Debug.Log("Attempt Break");
-                    break;
-                }
-                counter++;
             }
-            counter = 0;
+            
             Debug.Log("counter after reset = " + counter.ToString());
         }
         
