@@ -16,7 +16,17 @@ public class ScoreBoardScript : MonoBehaviour {
 
     private void Start()
     {
+        //PlayerName.text = Name.text;
+        //setting size
+        BestTimes = new float[6];
+        for (int x = 0; x < BestTimesText.Length; x++)
+        {
+            BestTimes[x] = PlayerPrefs.GetFloat("highScoreValues" + x);
+            //BestNamesPrivate[x].text = PlayerPrefs.GetString("highScoreNames" + x);
 
+        }
+        DrawScores();
+        CheckForHighScore(PlayerPrefs.GetFloat("PlayerScore"));
     }
 
     private void SaveScores()
@@ -67,17 +77,7 @@ public class ScoreBoardScript : MonoBehaviour {
 
     public void NameWasEntered()
     {
-        //PlayerName.text = Name.text;
-        //setting size
-        BestTimes = new float[6];
-        for (int x = 0; x < BestTimesText.Length; x++)
-        {
-            BestTimes[x] = PlayerPrefs.GetFloat("highScoreValues" + x);
-            //BestNamesPrivate[x].text = PlayerPrefs.GetString("highScoreNames" + x);
-            
-        }
-        DrawScores();
-        CheckForHighScore(PlayerPrefs.GetFloat("PlayerScore"));
+
     }
 
 }
