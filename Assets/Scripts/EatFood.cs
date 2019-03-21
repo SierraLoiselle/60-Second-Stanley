@@ -39,7 +39,9 @@ namespace VRTK.Examples
             if (currentIndex == 4)
             {
                 Debug.Log("rhurhir");
+#pragma warning disable CS0618 // Type or member is obsolete
                 DestroyObject(gameObject);
+#pragma warning restore CS0618 // Type or member is obsolete
                 if (linkedObject.CompareTag("Food"))
                 {
                     Debug.Log("We should be eating");
