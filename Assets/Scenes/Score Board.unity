@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.30692244, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -538,7 +538,7 @@ Prefab:
     - target: {fileID: 224000012623161658, guid: d46cf6b1ad9d84a48ae7548a2a6b41b3,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 867
+      value: 388
       objectReference: {fileID: 0}
     - target: {fileID: 224000012623161658, guid: d46cf6b1ad9d84a48ae7548a2a6b41b3,
         type: 2}
@@ -3607,7 +3607,7 @@ RectTransform:
   - {fileID: 812599451}
   - {fileID: 142004722}
   m_Father: {fileID: 2016547227}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -11631,12 +11631,6 @@ MonoBehaviour:
   - {fileID: 714799843}
   - {fileID: 142004723}
   - {fileID: 1181731278}
-  BestNamesText:
-  - {fileID: 1499112004}
-  - {fileID: 330091388}
-  - {fileID: 341659420}
-  - {fileID: 812599452}
-  - {fileID: 980437513}
   PlayerName: {fileID: 587920287}
   Name: {fileID: 1683037907}
 --- !u!4 &539622063
@@ -26188,7 +26182,7 @@ RectTransform:
   - {fileID: 980437512}
   - {fileID: 1181731277}
   m_Father: {fileID: 2016547227}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -36930,8 +36924,8 @@ RectTransform:
   - {fileID: 743982345}
   - {fileID: 1844929419}
   - {fileID: 1589440148}
-  - {fileID: 150408419}
   - {fileID: 1380847654}
+  - {fileID: 150408419}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
