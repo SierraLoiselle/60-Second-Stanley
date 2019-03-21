@@ -9,10 +9,13 @@ public class ScoreBoardScript : MonoBehaviour {
     public Text[] BestTimesText;
     //public Text[] BestNamesText;
     public Text PlayerName;
-    public InputField Name; 
+    public InputField Name;
+    public Text PlayScore;
 
     private float[] BestTimes;
     //private Text[] BestNamesPrivate;
+    private string minutes;
+    private string seconds;
 
     private void Start()
     {
@@ -67,12 +70,17 @@ public class ScoreBoardScript : MonoBehaviour {
     {
         for (int x = 0; x < BestTimesText.Length; x++)
         {
-            string minutes = ((int)BestTimes[x] / 60).ToString();
-            string seconds = (BestTimes[x] % 60).ToString("f2");
+            minutes = ((int)BestTimes[x] / 60).ToString();
+            seconds = (BestTimes[x] % 60).ToString("f2");
             BestTimesText[x].text = minutes + ":" + seconds;
            // BestNamesText[x] = PlayerName; 
             
         }
+
+        minutes = ((int)PlayerPrefs.GetFloat("PlayerScore")/ 60).ToString();
+        seconds = (PlayerPrefs.GetFloat("PlayerScore") % 60).ToString("f2");
+        PlayScore.text = minutes + ":" + seconds;
+        
     }
 
     public void NameWasEntered()
