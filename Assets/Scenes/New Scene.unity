@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.12731749, g: 0.13414757, b: 0.1210787, a: 1}
+  m_IndirectSpecularColor: {r: 0.12731713, g: 0.13414736, b: 0.12107852, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -263,11 +263,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 34967896}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &57782573 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 124034, guid: 4d293c8e162f3874b982baadd71153d2,
-    type: 2}
-  m_PrefabInternal: {fileID: 545391905}
 --- !u!1 &91461578
 GameObject:
   m_ObjectHideFlags: 0
@@ -820,11 +815,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 299bdb25f73dbaa41a3fb4e1339f5cbe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &269623701 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 159396, guid: 4d293c8e162f3874b982baadd71153d2,
-    type: 2}
-  m_PrefabInternal: {fileID: 545391905}
 --- !u!1 &291222929
 GameObject:
   m_ObjectHideFlags: 0
@@ -938,7 +928,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 1067, y: -70}
+  m_AnchoredPosition: {x: 738, y: -70}
   m_SizeDelta: {x: 142, y: 120}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &297351260
@@ -1054,14 +1044,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bbef415ca4404081ab7abdd88f0a7f2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fallbackCamera: {fileID: 1302976902}
-  eventSystem: {fileID: 1033446418}
-  currentText: {fileID: 1063877346}
-  statusPanel: {fileID: 1892680200}
-  selectionPanel: {fileID: 998146324}
-  switchButton: {fileID: 671082935}
-  cancelButton: {fileID: 91461582}
-  chooseButton: {fileID: 1880969173}
+  fallbackCamera: {fileID: 0}
+  eventSystem: {fileID: 0}
+  currentText: {fileID: 0}
+  statusPanel: {fileID: 0}
+  selectionPanel: {fileID: 0}
+  switchButton: {fileID: 0}
+  cancelButton: {fileID: 0}
+  chooseButton: {fileID: 0}
   playareaSync: 1
 --- !u!114 &352998281
 MonoBehaviour:
@@ -1241,16 +1231,6 @@ Transform:
   m_Father: {fileID: 1716778714}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &499841393 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 192944, guid: 4d293c8e162f3874b982baadd71153d2,
-    type: 2}
-  m_PrefabInternal: {fileID: 545391905}
---- !u!1 &544071951 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 189822, guid: 4d293c8e162f3874b982baadd71153d2,
-    type: 2}
-  m_PrefabInternal: {fileID: 545391905}
 --- !u!1001 &545391905
 Prefab:
   m_ObjectHideFlags: 0
@@ -2696,38 +2676,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eeda6d41317f444b900e374895f14e95, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  autoPopulateObjectReferences: 0
-  actualBoundaries: {fileID: 1228591427}
-  actualHeadset: {fileID: 544071951}
-  actualLeftController: {fileID: 57782573}
-  actualRightController: {fileID: 269623701}
-  modelAliasLeftController: {fileID: 1597562625}
-  modelAliasRightController: {fileID: 499841393}
+  autoPopulateObjectReferences: 1
+  actualBoundaries: {fileID: 0}
+  actualHeadset: {fileID: 0}
+  actualLeftController: {fileID: 0}
+  actualRightController: {fileID: 0}
+  modelAliasLeftController: {fileID: 0}
+  modelAliasRightController: {fileID: 0}
   cachedSystemSDKInfo:
     baseTypeName: VRTK.SDK_BaseSystem
     fallbackTypeName: VRTK.SDK_FallbackSystem
-    typeName: VRTK.SDK_SteamVRSystem
+    typeName: VRTK.SDK_FallbackSystem
     descriptionIndex: 0
   cachedBoundariesSDKInfo:
     baseTypeName: VRTK.SDK_BaseBoundaries
     fallbackTypeName: VRTK.SDK_FallbackBoundaries
-    typeName: VRTK.SDK_SteamVRBoundaries
+    typeName: VRTK.SDK_FallbackBoundaries
     descriptionIndex: 0
   cachedHeadsetSDKInfo:
     baseTypeName: VRTK.SDK_BaseHeadset
     fallbackTypeName: VRTK.SDK_FallbackHeadset
-    typeName: VRTK.SDK_SteamVRHeadset
+    typeName: VRTK.SDK_FallbackHeadset
     descriptionIndex: 0
   cachedControllerSDKInfo:
     baseTypeName: VRTK.SDK_BaseController
     fallbackTypeName: VRTK.SDK_FallbackController
-    typeName: VRTK.SDK_SteamVRController
+    typeName: VRTK.SDK_FallbackController
     descriptionIndex: 0
---- !u!1 &1228591427 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 146900, guid: 4d293c8e162f3874b982baadd71153d2,
-    type: 2}
-  m_PrefabInternal: {fileID: 545391905}
 --- !u!4 &1228591428 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 420908, guid: 4d293c8e162f3874b982baadd71153d2,
@@ -2850,10 +2825,8 @@ MonoBehaviour:
   scriptAliasRightController: {fileID: 0}
   autoManageVRSettings: 1
   autoLoadSetup: 1
-  setups:
-  - {fileID: 1218797434}
-  - {fileID: 1353423550}
-  excludeTargetGroups: 1a0000001b000000
+  setups: []
+  excludeTargetGroups: 1b0000001a000000
   persistOnLoad: 0
 --- !u!4 &1288419869
 Transform:
@@ -2999,32 +2972,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eeda6d41317f444b900e374895f14e95, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  autoPopulateObjectReferences: 0
-  actualBoundaries: {fileID: 1716778713}
-  actualHeadset: {fileID: 2046063184}
-  actualLeftController: {fileID: 1464182449}
-  actualRightController: {fileID: 1195261456}
-  modelAliasLeftController: {fileID: 1000637332}
-  modelAliasRightController: {fileID: 950839568}
+  autoPopulateObjectReferences: 1
+  actualBoundaries: {fileID: 0}
+  actualHeadset: {fileID: 0}
+  actualLeftController: {fileID: 0}
+  actualRightController: {fileID: 0}
+  modelAliasLeftController: {fileID: 0}
+  modelAliasRightController: {fileID: 0}
   cachedSystemSDKInfo:
     baseTypeName: VRTK.SDK_BaseSystem
     fallbackTypeName: VRTK.SDK_FallbackSystem
-    typeName: VRTK.SDK_SimSystem
+    typeName: VRTK.SDK_FallbackSystem
     descriptionIndex: 0
   cachedBoundariesSDKInfo:
     baseTypeName: VRTK.SDK_BaseBoundaries
     fallbackTypeName: VRTK.SDK_FallbackBoundaries
-    typeName: VRTK.SDK_SimBoundaries
+    typeName: VRTK.SDK_FallbackBoundaries
     descriptionIndex: 0
   cachedHeadsetSDKInfo:
     baseTypeName: VRTK.SDK_BaseHeadset
     fallbackTypeName: VRTK.SDK_FallbackHeadset
-    typeName: VRTK.SDK_SimHeadset
+    typeName: VRTK.SDK_FallbackHeadset
     descriptionIndex: 0
   cachedControllerSDKInfo:
     baseTypeName: VRTK.SDK_BaseController
     fallbackTypeName: VRTK.SDK_FallbackController
-    typeName: VRTK.SDK_SimController
+    typeName: VRTK.SDK_FallbackController
     descriptionIndex: 0
 --- !u!4 &1353423551
 Transform:
@@ -3436,11 +3409,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1594522225}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &1597562625 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 147176, guid: 4d293c8e162f3874b982baadd71153d2,
-    type: 2}
-  m_PrefabInternal: {fileID: 545391905}
 --- !u!1 &1636905090
 GameObject:
   m_ObjectHideFlags: 0
@@ -3668,15 +3636,15 @@ MonoBehaviour:
   showHandAxisHelpers: 1
   lockMouseToView: 1
   mouseMovementInput: 0
-  handMoveMultiplier: 0.2
-  handRotationMultiplier: 30
+  handMoveMultiplier: 0.002
+  handRotationMultiplier: 0.5
   playerMoveMultiplier: 5
   playerRotationMultiplier: 0.5
   playerSprintMultiplier: 2
   lockedCursorMultiplier: 5
   leftHandColor: {r: 1, g: 0, b: 0, a: 1}
   rightHandColor: {r: 0, g: 1, b: 0, a: 1}
-  mouseMovementKey: 325
+  mouseMovementKey: 324
   toggleControlHints: 282
   toggleMouseLock: 285
   changeHands: 9
@@ -3691,7 +3659,7 @@ MonoBehaviour:
   moveBackward: 115
   moveRight: 100
   sprint: 304
-  triggerAlias: 111
+  triggerAlias: 324
   gripAlias: 323
   touchpadAlias: 113
   buttonOneAlias: 101
