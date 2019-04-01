@@ -19,6 +19,6 @@ public class MenuSceneChanger : MonoBehaviour {
 
     public void StartButton ()
     {
-        EditorSceneManager.LoadScene("Tester");
+        EditorSceneManager.LoadScene("New Scene");
     }
 }
