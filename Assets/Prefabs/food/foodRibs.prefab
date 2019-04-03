@@ -123,15 +123,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1351085230696876}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-<<<<<<< HEAD
-<<<<<<< HEAD
-  m_LocalPosition: {x: -54.255524, y: 1.95, z: -24.933575}
-=======
-  m_LocalPosition: {x: -54.38801, y: 1.95, z: -24.93021}
->>>>>>> Narrator
-=======
-  m_LocalPosition: {x: -53.816742, y: 1.95, z: -25.488977}
->>>>>>> CollisionAudio
+  m_LocalPosition: {x: -54.225986, y: 1.95, z: -24.95698}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4569716102076492}
