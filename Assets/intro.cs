@@ -20,5 +20,9 @@ public class intro : MonoBehaviour {
             SceneManager.LoadScene("Locked Room w water and audio");
             Debug.Log("AHHH");
         }
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            SceneManager.LoadScene("Locked Room w water and audio");
+        }
     }
 }

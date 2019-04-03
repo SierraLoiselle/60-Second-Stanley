@@ -1868,7 +1868,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'You are alive '
+  m_Text: 
 --- !u!222 &351425966
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5805,8 +5805,8 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1221090160}
-  m_LocalRotation: {x: 0.0011410837, y: -0.6480105, z: 0.000971843, w: 0.76163}
-  m_LocalPosition: {x: -1.0904391, y: -1.2214915, z: 0.40538752}
+  m_LocalRotation: {x: -0.013544176, y: -0.9774016, z: 0.06607393, w: -0.20034212}
+  m_LocalPosition: {x: -0.08882874, y: -0.8271515, z: 0.13859236}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -7981,7 +7981,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0.642, y: 0.9055}
+  m_AnchoredPosition: {x: 0.941, y: 1.61}
   m_SizeDelta: {x: 756, y: 429}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1675664227
@@ -8651,7 +8651,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 987, y: -70}
+  m_AnchoredPosition: {x: 1356, y: -70}
   m_SizeDelta: {x: 142, y: 120}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1774338114
