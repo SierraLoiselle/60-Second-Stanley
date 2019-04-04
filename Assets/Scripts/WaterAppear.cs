@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class WaterAppear : MonoBehaviour {
 
@@ -37,10 +38,16 @@ public class WaterAppear : MonoBehaviour {
         //This can be chnaged it is what is going to be stored as the time they they player took to die jkdrjfjaa fj
         
         t = Time.time - startime;
-        PlayerPrefs.SetFloat("playertime", t);
+        PlayerPrefs.SetFloat("PlayerScore", t);
         string minutes = ((int)t / 60).ToString();
         string seconds = (t % 60).ToString("f2");
         Timer.text = minutes + ":" + seconds;
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            SceneManager.LoadScene("Score Board");
+
+        }
 	}
 
     

@@ -19,6 +19,6 @@ public class MenuSceneChanger : MonoBehaviour {
 
     public void StartButton ()
     {
-        EditorSceneManager.LoadScene("Locked Room w water and audio");
+        EditorSceneManager.LoadScene("New Scene");
     }
 }

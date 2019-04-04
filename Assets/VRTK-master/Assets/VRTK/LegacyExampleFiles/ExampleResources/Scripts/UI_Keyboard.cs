@@ -5,6 +5,9 @@
 
     public class UI_Keyboard : MonoBehaviour
     {
+        public GameObject owo;
+        public static bool EnterBool;
+
         private InputField input;
 
         public void ClickKey(string character)
@@ -24,11 +27,13 @@
         {
             VRTK_Logger.Info("You've typed [" + input.text + "]");
             input.text = "";
+            EnterBool = true;
         }
 
         private void Start()
         {
             input = GetComponentInChildren<InputField>();
+            
         }
     }
 }
