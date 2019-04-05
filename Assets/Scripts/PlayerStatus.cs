@@ -77,6 +77,10 @@ public class PlayerStatus : MonoBehaviour {
 
 
         }
+        else
+        {
+            alive.text = "YOU ALIVE";
+        }
 
 
         DisplayScores();
