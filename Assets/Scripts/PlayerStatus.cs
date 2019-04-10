@@ -20,6 +20,11 @@ public class PlayerStatus : MonoBehaviour {
     public bool room;
     public bool gameover;
 
+    public Text collectiontext;
+    public float collectiontimer;
+    public bool first;
+    AudioSource audioSource;
+
     private float lastEatTime;
     private float lastDrinkTime;
     private float lastBreath;
@@ -34,6 +39,8 @@ public class PlayerStatus : MonoBehaviour {
         lastUWTime = Time.time;
         lastBreath = Time.time;
         waterbase = GameObject.Find("FluvioWater4");
+        audioSource = GameObject.Find("Stats").GetComponent<AudioSource>();
+        first = GameObject.Find("PlayerMover").GetComponent<Moving>().first;
         gameover = false;
     }
 	
@@ -44,6 +51,24 @@ public class PlayerStatus : MonoBehaviour {
         if (Time.time - lastUWTime >= 1)
         {
             lastUWTime--;
+            if(room == true && first != true && !audioSource.isPlaying)
+            {
+                collectiontimer--;
+                Debug.Log("AHHH");
+                if (collectiontimer == 0)
+                {
+                    SceneManager.LoadScene("Score Board");
+                }
+            }
+            else
+            {
+                collectiontimer = 20;
+            }
+            if(first == true)
+            {
+                audioSource.Play();
+                first = false;
+            }
         }
         if (Time.time - lastDrinkTime >= drinkTimeGap && room == false)
         {
@@ -104,6 +129,7 @@ public class PlayerStatus : MonoBehaviour {
         hungertext.text = "hunger is " + hunger.ToString();
         thirsttext.text = "thirst is " + thirst.ToString();
         drowningtext.text ="drowning time is " + drowning.ToString();
+        collectiontext.text = collectiontimer.ToString();
     }
 
 

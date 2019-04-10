@@ -6,12 +6,14 @@ public class Moving : MonoBehaviour {
     public GameObject cameraRigTransformv;
     public GameObject cameraRigTransformf;
     public bool room;
+    public bool first;
     //false = locked room
     // true = collection room
     private bool gameMode;
     // Use this for initialization
     void Start () {
         room = false;
+        first = true;
 		if(cameraRigTransformv.activeSelf == true)
         {
             gameMode = true;
