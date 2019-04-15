@@ -64,7 +64,7 @@ public class PlayerStatus : MonoBehaviour {
             {
                 collectiontimer = 20;
             }
-            if(first == true)
+            if(first == true && room == true)
             {
                 audioSource.Play();
                 first = false;
