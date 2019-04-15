@@ -29,6 +29,7 @@ public class PlayerStatus : MonoBehaviour {
     private float lastDrinkTime;
     private float lastBreath;
     private float lastUWTime;
+    private float counter;
 
 
 
@@ -42,6 +43,7 @@ public class PlayerStatus : MonoBehaviour {
         audioSource = GameObject.Find("Stats").GetComponent<AudioSource>();
         first = GameObject.Find("PlayerMover").GetComponent<Moving>().first;
         gameover = false;
+        counter = 0;
     }
 	
 	// Update is called once per frame
@@ -51,24 +53,29 @@ public class PlayerStatus : MonoBehaviour {
         if (Time.time - lastUWTime >= 1)
         {
             lastUWTime--;
-            if(room == true && first != true && !audioSource.isPlaying)
-            {
-                collectiontimer--;
-                Debug.Log("AHHH");
-                if (collectiontimer == 0)
+            counter++;
+            if (counter == 60){
+                counter = 0;
+                if (room == true && first != true && !audioSource.isPlaying)
                 {
-                    SceneManager.LoadScene("Score Board");
+                    collectiontimer--;
+                    Debug.Log("AHHH");
+                    if (collectiontimer == 0)
+                    {
+                        SceneManager.LoadScene("Score Board");
+                    }
+                }
+                else
+                {
+                    collectiontimer = 20;
+                }
+                if (first == true && room == true)
+                {
+                    audioSource.Play();
+                    first = false;
                 }
             }
-            else
-            {
-                collectiontimer = 20;
-            }
-            if(first == true && room == true)
-            {
-                audioSource.Play();
-                first = false;
-            }
+
         }
         if (Time.time - lastDrinkTime >= drinkTimeGap && room == false)
         {
