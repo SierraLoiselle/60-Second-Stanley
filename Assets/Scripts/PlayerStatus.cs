@@ -111,7 +111,7 @@ public class PlayerStatus : MonoBehaviour {
         }
         else
         {
-            alive.text = "YOU ALIVE";
+           // alive.text = "YOU ALIVE";
         }
 
 
