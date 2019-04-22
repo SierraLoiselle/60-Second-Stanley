@@ -22,11 +22,12 @@ public class ButtonMover : MonoBehaviour {
             counter2++;
             if (counter2 == 10)
             {
-                button.transform.position = new Vector3(.482f, .267f, 1.906f);
+                button.SetActive(false);
             }
             if (counter2 == 20)
             {
-                button.transform.position = new Vector3(-0.012f, .267f, .061f);
+                button.SetActive(true);
+                button = GameObject.Find("PushDownButton");
                 counter2 = 0;
             }
 
