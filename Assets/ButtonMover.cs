@@ -4,14 +4,23 @@ using UnityEngine;
 
 public class ButtonMover : MonoBehaviour {
 
-    public GameObject button;
+    public Rigidbody button;
+    private Rigidbody buttonInstance;
+    private List<Rigidbody> buttonStuff = new List<Rigidbody>();
     private double counter1;
     private double counter2;
     // Use this for initialization
     void Start () {
         counter1 = 0;
         counter2 = 0;
-	}
+        buttonInstance = button;
+        buttonInstance.transform.position = new Vector3(.477f, .934f, -1.015f);
+        //buttonInstance.transform.rotation = new Vector3(0, 90,90);
+        Instantiate(buttonInstance);
+        buttonStuff.Add(buttonInstance);
+        
+
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -22,14 +31,19 @@ public class ButtonMover : MonoBehaviour {
             counter2++;
             if (counter2 == 10)
             {
-                button.SetActive(false);
+                Debug.Log("should delete");
+                Destroy(buttonInstance);
             }
             if (counter2 == 20)
             {
-                button.SetActive(true);
-                button = GameObject.Find("PushDownButton");
+                buttonInstance = button;
+                buttonInstance.transform.position = new Vector3(.477f, .934f, -1.015f);
+                //buttonInstance.transform.rotation = new Vector3(0, 90,90);
+                Instantiate(buttonInstance);
+                buttonStuff.Add(buttonInstance);
                 counter2 = 0;
             }
+            
 
         }
 	}
