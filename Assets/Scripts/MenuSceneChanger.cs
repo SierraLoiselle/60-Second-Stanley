@@ -13,7 +13,16 @@ public class MenuSceneChanger : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
-
+        if (Input.GetKeyDown(KeyCode.LeftShift))
+        {
+            /*PlayerPrefs.DeleteAll();
+            for (int g = 0; g < 6; g++)
+            {
+                PlayerPrefs.SetFloat("HighScoreNames" + g, 500000000);
+            }
+            */
+            Debug.Log("asfdfj");
+        }
 
     }
 

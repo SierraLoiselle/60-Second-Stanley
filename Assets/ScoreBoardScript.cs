@@ -5,31 +5,48 @@ using UnityEngine.UI;
 
 public class ScoreBoardScript : MonoBehaviour {
 
-    //CheckForHighScore (totalClicks, PlayerName.text);
     public Text[] BestTimesText;
-    //public Text[] BestNamesText;
-    public Text PlayerName;
-    public InputField Name;
+    public Text[] BestNamesText;
+    public Text PlayerNumber;
     public Text PlayScore;
 
     private float[] BestTimes;
-    //private Text[] BestNamesPrivate;
+    private float[] BestNames;
     private string minutes;
     private string seconds;
+    private float holder;
 
     private void Start()
     {
-        //PlayerName.text = Name.text;
-        //setting size
+
+        holder = PlayerPrefs.GetFloat("TrailNumber");
+        PlayerPrefs.SetFloat("TrailNumber", holder);
+
         BestTimes = new float[6];
+        BestTimes = new float[6];
+
         for (int x = 0; x < BestTimesText.Length; x++)
         {
             BestTimes[x] = PlayerPrefs.GetFloat("highScoreValues" + x);
-            //BestNamesPrivate[x].text = PlayerPrefs.GetString("highScoreNames" + x);
+            BestNames[x] = PlayerPrefs.GetFloat("HighScoreNames" + x);
 
         }
         DrawScores();
-        CheckForHighScore(PlayerPrefs.GetFloat("PlayerScore"));
+        CheckForHighScore(PlayerPrefs.GetFloat("PlayerScore"), PlayerPrefs.GetFloat("TrailNumber"));
+        Debug.Log("scores have been saved");
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.X))
+        {
+            PlayerPrefs.DeleteAll(); 
+            for (int g = 0; g < 6; g++)
+            {
+                PlayerPrefs.SetFloat("HighScoreNames" + g, 500000000);
+            }
+            Debug.Log("asfdfj");
+        }
     }
 
     private void SaveScores()
@@ -37,21 +54,21 @@ public class ScoreBoardScript : MonoBehaviour {
         for (int x = 0; x < BestTimesText.Length; x++)
         {
             PlayerPrefs.SetFloat("highScoreValues" + x, BestTimes[x]);
-            //PlayerPrefs.SetString("highScoreNames" + x, BestNamesPrivate[x].ToString());
+            PlayerPrefs.SetFloat("HighScoreNames" + x, BestNames[x]);
         }
     }
-    public void CheckForHighScore(float value)
+    public void CheckForHighScore(float value, float Number)
     {
         for (int w = 0; w < BestTimesText.Length; w++)
         {
-            if (value < BestTimes[w])
+            if (value > BestTimes[w])
             {
                 for (int y = BestTimesText.Length - 1; y > w; y--)
                 {
                     BestTimes[y] = BestTimes[y - 1];
                 }
                 BestTimes[w] = value;
-                //BestNamesPrivate[w] = name;
+                BestNames[w] = Number;
                 DrawScores();
                 SaveScores();
                 break;
@@ -73,19 +90,15 @@ public class ScoreBoardScript : MonoBehaviour {
             minutes = ((int)BestTimes[x] / 60).ToString();
             seconds = (BestTimes[x] % 60).ToString("f2");
             BestTimesText[x].text = minutes + ":" + seconds;
-           // BestNamesText[x] = PlayerName; 
+            BestNames[x] = PlayerPrefs.GetFloat("HighScoreNames" + x); 
             
         }
 
         minutes = ((int)PlayerPrefs.GetFloat("PlayerScore")/ 60).ToString();
         seconds = (PlayerPrefs.GetFloat("PlayerScore") % 60).ToString("f2");
         PlayScore.text = minutes + ":" + seconds;
+        PlayerNumber.text = PlayerPrefs.GetFloat("TrailNumber").ToString();
         
-    }
-
-    public void NameWasEntered()
-    {
-
     }
 
 }
