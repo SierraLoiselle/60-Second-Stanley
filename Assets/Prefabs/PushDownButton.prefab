@@ -34,7 +34,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4822747960438806}
-  - component: {fileID: 54921659717078056}
+  - component: {fileID: 54925156028118342}
   m_Layer: 0
   m_Name: PushDownButton
   m_TagString: Untagged
@@ -551,7 +551,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 2
---- !u!54 &54921659717078056
+--- !u!54 &54925156028118342
 Rigidbody:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}

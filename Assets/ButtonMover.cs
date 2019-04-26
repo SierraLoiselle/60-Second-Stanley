@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class ButtonMover : MonoBehaviour {
 
-    public Rigidbody button;
-    private Rigidbody buttonInstance;
+    public GameObject button;
+    private GameObject buttonInstance;
     private List<Rigidbody> buttonStuff = new List<Rigidbody>();
     private double counter1;
     private double counter2;
@@ -17,7 +17,7 @@ public class ButtonMover : MonoBehaviour {
         buttonInstance.transform.position = new Vector3(.477f, .934f, -1.015f);
         //buttonInstance.transform.rotation = new Vector3(0, 90,90);
         Instantiate(buttonInstance);
-        buttonStuff.Add(buttonInstance);
+        //buttonStuff.Add(buttonInstance);
         
 
     }
@@ -32,6 +32,7 @@ public class ButtonMover : MonoBehaviour {
             if (counter2 == 10)
             {
                 Debug.Log("should delete");
+                buttonInstance = GameObject.Find("PushDownButton(Clone)");
                 Destroy(buttonInstance);
             }
             if (counter2 == 20)
@@ -40,7 +41,7 @@ public class ButtonMover : MonoBehaviour {
                 buttonInstance.transform.position = new Vector3(.477f, .934f, -1.015f);
                 //buttonInstance.transform.rotation = new Vector3(0, 90,90);
                 Instantiate(buttonInstance);
-                buttonStuff.Add(buttonInstance);
+                //buttonStuff.Add(buttonInstance);
                 counter2 = 0;
             }
             
