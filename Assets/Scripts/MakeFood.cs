@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MakeFood : MonoBehaviour {
+public class MakeFood : MonoBehaviour
+{
 
     public Rigidbody BreadPrefab;
     public Rigidbody CakePrefab;
@@ -27,11 +28,22 @@ public class MakeFood : MonoBehaviour {
 
     private Rigidbody FoodInstance;
     private List<Rigidbody> foodStuff = new List<Rigidbody>();
-    
+
     // Use this for initialization
-	void Start () {
+    void Start()
+    {
+        SpawnFood();
+    }
 
 
+    // Update is called once per frame
+    void Update()
+    {
+
+    }
+
+    private void SpawnFood()
+    {
 
         for (int i = 0; i < 16; i++)
         {
@@ -102,9 +114,5 @@ public class MakeFood : MonoBehaviour {
             Debug.Log("i = " + i + " : " + foodStuff[i].transform.position);
         }
     }
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
 }
+
