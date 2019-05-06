@@ -11,11 +11,14 @@ public class PlayerStatus : MonoBehaviour {
     public Text thirsttext;
     public Text drowningtext;
     public Text alive;
+
     public float eatTimeGap;
     public float drinkTimeGap;
+
     public float hunger;
     public float thirst;
     public float drowning;
+
     public GameObject waterbase;
     public bool room;
     public bool gameover;
@@ -44,6 +47,8 @@ public class PlayerStatus : MonoBehaviour {
         first = GameObject.Find("PlayerMover").GetComponent<Moving>().first;
         gameover = false;
         counter = 0;
+        //eatTimeGap = PlayerPrefs.GetInt("TimeGap");
+        //drinkTimeGap = PlayerPrefs.GetInt("TimeGap");
     }
 	
 	// Update is called once per frame
@@ -59,7 +64,6 @@ public class PlayerStatus : MonoBehaviour {
                 if (room == true && first != true && !audioSource.isPlaying)
                 {
                     collectiontimer--;
-                    Debug.Log("AHHH");
                     if (collectiontimer == 0)
                     {
                         SceneManager.LoadScene("Score Board");
@@ -79,6 +83,7 @@ public class PlayerStatus : MonoBehaviour {
         }
         if (Time.time - lastDrinkTime >= drinkTimeGap && room == false)
         {
+            
             thirst--;
             lastDrinkTime = Time.time;
         }

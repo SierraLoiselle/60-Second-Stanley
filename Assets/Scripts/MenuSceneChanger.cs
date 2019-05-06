@@ -15,12 +15,12 @@ public class MenuSceneChanger : MonoBehaviour {
     void Update() {
         if (Input.GetKeyDown(KeyCode.LeftShift))
         {
-            /*PlayerPrefs.DeleteAll();
+            PlayerPrefs.DeleteAll();
             for (int g = 0; g < 6; g++)
             {
                 PlayerPrefs.SetFloat("HighScoreNames" + g, 500000000);
             }
-            */
+            PlayerPrefs.SetInt("TimeGap", 1);
             Debug.Log("asfdfj");
         }
 

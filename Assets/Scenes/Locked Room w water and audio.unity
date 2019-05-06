@@ -3256,8 +3256,8 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 566147592}
-  m_LocalRotation: {x: 0.013410597, y: 0.9720098, z: 0.2274462, w: -0.057318356}
-  m_LocalPosition: {x: -0.21187258, y: -0.8551916, z: 0.31429863}
+  m_LocalRotation: {x: -0.20557396, y: 0.3157472, z: 0.07027577, w: 0.9236365}
+  m_LocalPosition: {x: -12.059151, y: -9.53624, z: -15.970496}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -4290,7 +4290,7 @@ MonoBehaviour:
   water: {fileID: 1266607629007412, guid: 683458db19f78fc42b7e82487ec39e32, type: 2}
   Timer: {fileID: 1161738527}
   startime: 0
-  waterbase: {fileID: 0}
+  waterbase: {fileID: 938511980}
   IsThereWater: 0
   room: 0
 --- !u!4 &768853602
@@ -8307,7 +8307,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 1057, y: -70}
+  m_AnchoredPosition: {x: 871, y: -70}
   m_SizeDelta: {x: 142, y: 120}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1774338114
@@ -9852,10 +9852,10 @@ MonoBehaviour:
   alive: {fileID: 351425965}
   eatTimeGap: 1
   drinkTimeGap: 1
-  hunger: 50
-  thirst: 50
+  hunger: 20
+  thirst: 20
   drowning: 20
-  waterbase: {fileID: 0}
+  waterbase: {fileID: 938511980}
   room: 0
   gameover: 0
   collectiontext: {fileID: 286050876}
