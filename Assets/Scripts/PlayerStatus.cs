@@ -54,7 +54,7 @@ public class PlayerStatus : MonoBehaviour {
         {
             lastUWTime--;
             counter++;
-            if (counter == 60){
+            if (counter == 120){
                 counter = 0;
                 if (room == true && first != true && !audioSource.isPlaying)
                 {
