@@ -20,32 +20,41 @@ public class ScoreBoardScript : MonoBehaviour {
     {
 
         holder = PlayerPrefs.GetFloat("TrailNumber");
-        PlayerPrefs.SetFloat("TrailNumber", holder);
+        PlayerPrefs.SetFloat("TrailNumber", holder + 1);
 
-        BestTimes = new float[6];
-        BestTimes = new float[6];
+
+        BestTimes = new float[5];
+        BestNames = new float[5];
+
+        Debug.Log(holder);
 
         for (int x = 0; x < BestTimesText.Length; x++)
         {
             BestTimes[x] = PlayerPrefs.GetFloat("highScoreValues" + x);
+        
             BestNames[x] = PlayerPrefs.GetFloat("HighScoreNames" + x);
-
+            
         }
         DrawScores();
         CheckForHighScore(PlayerPrefs.GetFloat("PlayerScore"), PlayerPrefs.GetFloat("TrailNumber"));
-        Debug.Log("scores have been saved");
     }
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.X))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
             PlayerPrefs.DeleteAll(); 
-            for (int g = 0; g < 6; g++)
+            for (int g = 0; g < 5; g++)
             {
-                PlayerPrefs.SetFloat("HighScoreNames" + g, 500000000);
+                BestNames[g] = 0;
+                BestTimes[g] = 0; 
+                //PlayerPrefs.SetFloat("HighScoreNames" + g, 0);
+                //PlayerPrefs.SetFloat("highScoreValues" + g, 0);
+                PlayerPrefs.SetFloat("TrailNumber", 0);
             }
-            Debug.Log("asfdfj");
+            SaveScores();
+            DrawScores();
+            Debug.Log("jesus");
         }
     }
 
@@ -66,6 +75,7 @@ public class ScoreBoardScript : MonoBehaviour {
                 for (int y = BestTimesText.Length - 1; y > w; y--)
                 {
                     BestTimes[y] = BestTimes[y - 1];
+                    BestNames[y] = BestNames[y - 1];
                 }
                 BestTimes[w] = value;
                 BestNames[w] = Number;
@@ -76,6 +86,7 @@ public class ScoreBoardScript : MonoBehaviour {
             else if (BestTimes[w] == 0)
             {
                 BestTimes[w] = value;
+                BestNames[w] = Number;
                 DrawScores();
                 SaveScores();
                 break;
@@ -85,19 +96,19 @@ public class ScoreBoardScript : MonoBehaviour {
 
     private void DrawScores()
     {
-        for (int x = 0; x < BestTimesText.Length; x++)
+        for (int x = 0; x < 5; x++)
         {
             minutes = ((int)BestTimes[x] / 60).ToString();
             seconds = (BestTimes[x] % 60).ToString("f2");
             BestTimesText[x].text = minutes + ":" + seconds;
-            BestNames[x] = PlayerPrefs.GetFloat("HighScoreNames" + x); 
+            BestNamesText[x].text = BestNames[x].ToString(); 
             
         }
 
         minutes = ((int)PlayerPrefs.GetFloat("PlayerScore")/ 60).ToString();
         seconds = (PlayerPrefs.GetFloat("PlayerScore") % 60).ToString("f2");
         PlayScore.text = minutes + ":" + seconds;
-        PlayerNumber.text = PlayerPrefs.GetFloat("TrailNumber").ToString();
+        PlayerNumber.text = (PlayerPrefs.GetFloat("TrailNumber")).ToString();
         
     }
 

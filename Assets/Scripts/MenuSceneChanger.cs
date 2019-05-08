@@ -15,13 +15,8 @@ public class MenuSceneChanger : MonoBehaviour {
     void Update() {
         if (Input.GetKeyDown(KeyCode.LeftShift))
         {
-            /*PlayerPrefs.DeleteAll();
-            for (int g = 0; g < 6; g++)
-            {
-                PlayerPrefs.SetFloat("HighScoreNames" + g, 500000000);
-            }
-            */
-            Debug.Log("asfdfj");
+            PlayerPrefs.DeleteAll();
+            Debug.Log("All the stuff has been reset");
         }
 
     }
@@ -29,5 +24,9 @@ public class MenuSceneChanger : MonoBehaviour {
     public void StartButton ()
     {
         EditorSceneManager.LoadScene("New Scene");
+    }
+    public void SettingButton()
+    {
+        EditorSceneManager.LoadScene("Setting Menu");
     }
 }
