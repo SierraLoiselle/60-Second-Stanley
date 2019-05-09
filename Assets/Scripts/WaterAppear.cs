@@ -13,7 +13,8 @@ public class WaterAppear : MonoBehaviour {
     public GameObject waterbase;
     public bool IsThereWater;
     public bool room;
-    private float t; 
+    private float t;
+    private float p;
     // Use this for initialization
 	void Start () {
         IsThereWater = false;
@@ -21,7 +22,7 @@ public class WaterAppear : MonoBehaviour {
         IsThereWater = true;
         waterbase = GameObject.Find("FluvioWater4");
         startime = Time.time;
-
+        p = 6 - PlayerPrefs.GetInt("TimeGap");
         //oil.position = new Vector3()
     }
 	
@@ -31,7 +32,7 @@ public class WaterAppear : MonoBehaviour {
         if (IsThereWater == true && room == false)
         {
             float i = waterbase.transform.position.y;
-            i = i + .0001f;
+            i = i + .0001f * p;
             waterbase.transform.position = new Vector3(0, i, 0);
         }
         //player prefs are vars that are saved within the game, this is making a playerpref called playertime and assigning it the value of time - startime

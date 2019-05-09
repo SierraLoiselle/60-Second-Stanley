@@ -44,10 +44,13 @@ public class PlayerStatus : MonoBehaviour {
         first = GameObject.Find("PlayerMover").GetComponent<Moving>().first;
         gameover = false;
         counter = 0;
+        eatTimeGap = PlayerPrefs.GetInt("TimeGap");
+        drinkTimeGap = PlayerPrefs.GetInt("TimeGap");
+
     }
-	
-	// Update is called once per frame
-	void Update () {
+
+    // Update is called once per frame
+    void Update () {
 
         room = GameObject.Find("PlayerMover").GetComponent<Moving>().room;
         if (Time.time - lastUWTime >= 1)
