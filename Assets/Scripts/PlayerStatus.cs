@@ -44,8 +44,8 @@ public class PlayerStatus : MonoBehaviour {
         first = GameObject.Find("PlayerMover").GetComponent<Moving>().first;
         gameover = false;
         counter = 0;
-        eatTimeGap = PlayerPrefs.GetInt("TimeGap");
-        drinkTimeGap = PlayerPrefs.GetInt("TimeGap");
+        eatTimeGap = 1/*PlayerPrefs.GetInt("TimeGap")*/;
+        drinkTimeGap = 1/*PlayerPrefs.GetInt("TimeGap")*/;
 
     }
 

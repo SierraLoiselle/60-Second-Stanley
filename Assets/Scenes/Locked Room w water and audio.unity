@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028334, g: 0.2257134, b: 0.30692226, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.30692244, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3168,8 +3168,8 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 566147592}
-  m_LocalRotation: {x: 0, y: 1, z: 0, w: -0.00000004371139}
-  m_LocalPosition: {x: -0.7214928, y: -1.4905001, z: 0.9252863}
+  m_LocalRotation: {x: 0.02538137, y: 0.95333225, z: 0.2889671, w: -0.08373385}
+  m_LocalPosition: {x: 3.3267999, y: -12.420086, z: 17.800817}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -8368,7 +8368,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 824, y: -70}
+  m_AnchoredPosition: {x: 1215, y: -70}
   m_SizeDelta: {x: 142, y: 120}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1774338114
@@ -9913,9 +9913,9 @@ MonoBehaviour:
   alive: {fileID: 351425965}
   eatTimeGap: 1
   drinkTimeGap: 1
-  hunger: 50
-  thirst: 50
-  drowning: 20
+  hunger: 20
+  thirst: 20
+  drowning: 50
   waterbase: {fileID: 0}
   room: 0
   gameover: 0

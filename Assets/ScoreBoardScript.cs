@@ -51,10 +51,11 @@ public class ScoreBoardScript : MonoBehaviour {
                 //PlayerPrefs.SetFloat("HighScoreNames" + g, 0);
                 //PlayerPrefs.SetFloat("highScoreValues" + g, 0);
                 PlayerPrefs.SetFloat("TrailNumber", 0);
+                PlayerPrefs.SetFloat("TimeGap", 1);
+
             }
             SaveScores();
             DrawScores();
-            Debug.Log("jesus");
         }
     }
 
