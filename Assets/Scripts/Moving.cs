@@ -69,11 +69,12 @@ public class Moving : MonoBehaviour {
         if(cameraRigTransformv.transform.position.x == 0 && gameMode == true)
         {
             ToCollectionRoom();
-            
+            GameObject.Find("this makes the food").GetComponent<MakeFood>().SpawnFood();
+
         }
         else if(cameraRigTransformf.transform.position.x == 0 && gameMode == false){
             ToCollectionRoom();
-           
+            GameObject.Find("this makes the food").GetComponent<MakeFood>().SpawnFood();
         }
         else
         {

@@ -44,8 +44,8 @@ public class PlayerStatus : MonoBehaviour {
         first = GameObject.Find("PlayerMover").GetComponent<Moving>().first;
         gameover = false;
         counter = 0;
-        eatTimeGap = 1/*PlayerPrefs.GetInt("TimeGap")*/;
-        drinkTimeGap = 1/*PlayerPrefs.GetInt("TimeGap")*/;
+        eatTimeGap = PlayerPrefs.GetInt("TimeGap");
+        drinkTimeGap = PlayerPrefs.GetInt("TimeGap");
 
     }
 
@@ -57,7 +57,7 @@ public class PlayerStatus : MonoBehaviour {
         {
             lastUWTime--;
             counter++;
-            if (counter == 120){
+            if (counter == 30){
                 counter = 0;
                 if (room == true && first != true && !audioSource.isPlaying)
                 {

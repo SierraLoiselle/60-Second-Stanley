@@ -42,7 +42,7 @@ public class MakeFood : MonoBehaviour
 
     }
 
-    private void SpawnFood()
+    public void SpawnFood()
     {
 
         for (int i = 0; i < 16; i++)
